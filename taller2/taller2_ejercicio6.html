@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+	<title>Cantera 1 Taller 2 Ejercicio 6</title>
+</head>
+<body>
+
+	<section id="contenedor_ultra">
+<nav id="titulo">Taller 2 PSeint</nav>
+
+
+<article id="Container">
+
+<section id="subtitulo">CICLOS</section>
+<nav id="caja3_ultra">
+	<div id="subtitulo">Ejercicio # 6</div>
+     <br>
+      <p>6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las
+            respectivas revisiones y requiere una aplicación que le permita registrar los servicios
+            generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller
+            y las observaciones por parte del cliente. También debe existir registro de salida del taller
+            con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera
+            inventariar cambios repuestos en la motocicleta al entregarla.<br><br>
+</p>
+     <nav id="caja4_ultra">
+       <p>Código Pseint</p>
+          <ul>
+          Proceso Appmaqunista
+  <li>Definir app Como Real;</li>
+  <li>Definir ingreso Como Caracter;</li>
+  <li>Definir opcion Como real;</li>
+  <li>Definir marca Como Caracter;</li>
+  <li>Definir tipo Como Caracter;</li>
+  <li>Definir placa Como Caracter;</li>
+  <li>Definir nombre Como Caracter;</li>
+  <li>Definir tipofalla Como Caracter;</li>
+  <li>Definir reparacion Como Caracter;</li>
+  <li>Definir servicio Como Caracter;</li>
+  <li>Definir fechaEnt Como Caracter;</li>
+  <li>Definir fechaSal Como Caracter;</li>
+  <li>Definir comentario Como Caracter;</li>
+  <li>Definir precio Como Real;</li>
+  <li>Definir repuestos Como Caracter;</li>
+  <li>Definir opcion2 Como real;</li>
+  <li>Definir status Como real;</li>
+  <li>Definir opcion3 Como real;</li>
+  <li>Definir queja Como Caracter;</li>
+  <li>status <- 1;</li>
+  <li>//Muestra de opciones</li>
+  <li>Escribir "Elija una Opción";</li>
+  <li>Escribir "1. Ingresar Servicio Mecánico";</li>
+  <li>Escribir "2. Finalzar Servicios ";
+  <li>Escribir "3. Zona Cliente para comentar el Servicio";</li>
+  <li>Leer opcion;</li>
+  <li>//fin de muestra de opciones</li>
+  <li>Segun opcion Hacer</li>
+   <li> 1://ingreso de servicios</li>
+     <li> Escribir "Ingresa la Fecha de Entrada de la Moto";</li>
+     <li> Leer fechaEnt;</li>
+     <li> Escribir "Ingresa el nombre del Cliente o Dueño";</li>
+     <li> Leer nombre;</li>
+     <li> Escribir "Ingresa la Placa de la Moto";</li>
+      <li>Leer placa;</li>
+     <li> Escribir "Ingresa la Marca de la Moto";</li>
+     <li> Leer marca;</li>
+      <li>Escribir "Ingresa la tipo de la Moto";</li>
+      <li>Leer tipo;</li>
+      <li>Escribir "Ingresa el tipo de falla que tiene la moto";</li>
+      <li>Leer tipofalla;</li>
+      <li>si status = 1 Entonces</li>
+        <li>Escribir "¿El servicio fue Conluido?";</li>
+        <li>Escribir "1. SI";</li>
+        <li>Escribir "2. NO";</li>
+        <li>leer opcion2;</li>
+        <li>Segun opcion2 Hacer</li>
+          <li>1:</li>
+           <li> Escribir "¿Cual fue el problema mecánico de la Moto?";</li>
+            <li>Leer reparacion;</li>
+           <li> Escribir "Indique los repuestos usados";</li>
+            <li>Leer repuestos;</li>
+            <li>Escribir "Indique la fecha de Salida";</li>
+            <li>Leer fechaSal;</li>
+            <li>status <- 2;</li>
+            <li>si status = 1 Entonces</li>
+              <li>Escribir "Estado de la Moto aún en reparación";</li>
+            <li>SiNo</li>
+              <li>Escribir "El Estado de la Moto es entregada";</li>
+            <li>FinSi</li>
+            <li>//mensaje de status de servicio</li>
+          <li>2:</li>
+            <li>Escribir "El Estatus de la Moto sigue estando en reparación";</li>
+       <li>FinSegun</li>
+      <li>SiNo</li>
+        <li>Escribir "Este servicio mecánico ya fue concluido";</li>
+      <li>FinSi</li>
+      <li>//fin de ingreso de servicio</li>
+    <li>2:  //inicio de petición de finalización de servicio</li>
+     <li> Escribir "Ingresa la Placa de la Moto";</li>
+      <li>Leer placa;</li>
+      <li>Escribir "¿Cual fue el problema mecánico de la Moto?";</li>
+      <li>Leer reparacion;</li>
+      <li>Escribir "Indique los repuestos usados";</li>
+      <li>Leer repuestos;</li>
+      <li>Escribir "Indique la fecha de Salida";</li>
+      <li>Leer fechaSal;</li>
+      <li>status <- 2;</li>
+      <li>si status = 1 Entonces</li>
+       <li> Escribir "Estado de la Moto aún en reparación</li>
+      <li>SiNo</li>
+        <li>Escribir "El Estado de la Moto lista para ser entregada";</li>
+      <li>FinSi</li>
+      <li>//fin de finalización de servicio</li>
+    <li>3: //inico de zona cliente y comentarios</li>
+      <li>Escribir "Bienvenido a la Zona cliente";</li>
+      <li>Escribir "Zona de servicio de satifacción al cliente";</li>
+      <li>Escribir "Elija su Opción";</li>
+      <li>Escribir "1. Queja de Servcio";</li>
+      <li>Escribir "2. Comentarios del Servicio";</li>
+      <li>leer opcion3;</li>
+     <li>si opcion3 = 1 Entonces</li>
+       <li> Escribir "Estimado cliente indique aquí su queja";</li>
+       <li> Escribir "Indique su nombre";</li>
+        <li>Leer nombre;</li>
+       <li> Escribir "Escriba la placa de su moto";</li>
+       <li> Leer placa;</li>
+        <li>Escribir "Por favor escribanos su queja";</li>
+        <li>Leer queja;</li>
+        <li>Limpiar Pantalla;</li>
+        <li>Escribir  "Muchas Gracias Sr(a) " , nombre , " dueño de la moto placa ", placa;</li>
+        <li>Escribir "Su queja es: ";
+        <li>Escribir queja;</li>
+        <li>Escribir "Muchas gracias por dejarnos sus comerntarios, lo tomaremos en cuenta y corregiremos nuestros Servicios";</li>
+      <li>SiNo</li>
+        <li>Escribir "Estimado cliente indique aquí su comentario";</li>
+        <li>Escribir "Indique su nombre";</li>
+        <li>Leer nombre;</li>
+        <li>Escribir "Escriba la placa de su moto"</li>
+        <li>Leer placa;</li>
+        <li>Escribir "Por favor escribanos su comentario";</li>
+        <li>Leer comentario;</li>
+        <li>Limpiar Pantalla;</li>
+        <li>Escribir  "Muchas Gracias Sr(a) " ,nombre , " dueño de la moto placa ", placa;</li>
+        <li>Escribir "Su comentario es: ";</li>
+        <li>Escribir comentario;</li>
+        <li>Escribir "Muchas gracias por dejarnos sus comerntarios, Estamos para servirle";</li> 
+      <li>FinSi</li>
+      <li>//fin de comentarios de cliente</li>
+  FinSegun<br>
+FinProceso
+          
+        </ul>
+     </nav>
+     
+</nav>
+
+</nav>
+<section class="caja_links">
+  <nav class="links">
+    <button class="boton2"><a href="../portafolio.html" >Volver a Principal</a></button> 
+    
+  </nav></section>
+</article>
+
+	</section>
+
+	<footer>
+        <table>
+          <tr><th colspan="3"><h1>Redes sociales</h1>
+            <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4></td></td></tr>
+          <tr>
+            <td><h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="../imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4></td>
+            <td><h4 align="center"><a href="http://facebook.com">
+              <img src="../imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4></td>
+            <td><h4 align="center"><a href="http://instagram.com">
+              <img src="../imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4></td>
+          </tr>
+            </table>
+      </footer>
+</body>
+</html>

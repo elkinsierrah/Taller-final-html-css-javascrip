@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script type="text/javascript" src="js/contact.js"></script>
+	
+	<title>Formulario</title>
+</head>
+<body>
+
+<h1>Formulario de Contacto</h1>
+	<nav id="contactame">
+	<form name="formulario" method="get">
+	<fieldset>
+		<legend>Formulario  de Contacto</legend>
+
+		<label>Nombre</label>
+		<input type="text" name="nombre" id="nombre" required> 
+
+		<label>Apellido</label>
+		<input type="text" name="apellidos" id="apellidos" required>  
+
+		<label>Correo</label>
+		<input type="email" name="correo" id="correo" required>
+
+
+		<label>Escriba su Mensaje</label>
+		<textarea name="mensaje" id="mensaje" cols="10" rows="8"></textarea><br>
+		
+		<button class="form_envio" type="submit" id="btn" name="enviar" value="enviado" onclick="formEnvio()">Enviar</button>
+		<button class="form_envio" type="reset" name="limpiar">Borrar</button>
+	</fieldset>	
+	</form>
+</nav>
+
+	
+</body>
+</html>

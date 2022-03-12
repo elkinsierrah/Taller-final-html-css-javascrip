@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+	<title>Taller 3 Ejercicio 7</title>
+</head>
+<body>
+
+	<section id="contenedor_ultra2">
+<nav id="titulo">Taller 3 Ejercicio 7</nav>
+
+
+<article id="Container">
+
+<section id="subtitulo">CICLOS</section>
+<nav id="caja3_ultra2">
+	<div id="subtitulo">Ejercicio # 7</div>
+     <br>
+      <p>7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los
+        usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se
+        cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del
+        vehículo como son, placa y marca, y los datos del cliente como son nombre completo y
+        número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al
+        parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el
+        parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+        Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.
+        </p>
+     <nav id="caja4_ultra2">
+       <p>Código Pseint</p>
+          <ul>
+            Proceso AppParqueadero
+	
+            <li>Definir nombre1, tlf1, placa1,  marca1, fechayhorain1,  fechayhorasal1 Como Caracter;</li>
+            <li>Definir nombre2, tlf2, placa2,  marca2, fechayhorain2,  fechayhorasal2 Como Caracter;</li>
+            <li>Definir nombre3, tlf3, placa3,  marca3, fechayhorain3,  fechayhorasal3 Como Caracter;</li>
+            <li>Definir nombre4, tlf4, placa4,  marca4, fechayhorain4,  fechayhorasal4 Como Caracter;</li>
+            <li>Definir nombre5, tlf5, placa5,  marca5, fechayhorain5,  fechayhorasal5 Como Caracter;</li>
+            <li>Definir salir, ingresar,  opcion  Como Caracter;</li>
+            <li>Definir ingreso Como Entero;</li>
+            <li>Definir opcion2 Como Entero;</li>
+            <li>Definir Activo Como Logico;</li>
+            <li>Definir retirar Como Caracter;</li>
+            <li>ingreso <- 0;</li>
+            <li>//inicializacion de variables</li>
+            <li>nombre1 <- "Vacio"; nombre2 <- "Vacio";  nombre3 <- "Vacio";  nombre4 <- "Vacio";  nombre5 <- "Vacio";</li> 
+            <li>placa1 <- "Vacio";  placa2 <- "Vacio";  placa3 <- "Vacio";  placa4 <- "Vacio";  placa5 <- "Vacio";</li> 
+            <li>tlf1 <- "Vacio";  tlf2 <- "Vacio";  tlf3 <- "Vacio";  tlf4 <- "Vacio";  tlf5 <- "Vacio";</li> 
+            <li>marca1 <- "Vacio";  marca2 <- "Vacio";  marca3 <- "Vacio";  marca4 <- "Vacio";  marca5 <- "Vacio";</li>    
+            <li>fechayhorain1 <- "Vacio"; ; fechayhorain2 <- "Vacio";  fechayhorain3 <- "Vacio";  fechayhorain4 <- "Vacio";  fechayhorain5 <- "Vacio";</li> 
+            <li>fechayhorasal1 <- "Vacio";  fechayhorasal2 <- "Vacio"; fechayhorasal3 <- "Vacio";  fechayhorasal4 <- "Vacio";  fechayhorasal5 <- "Vacio"; </li>
+            <li>//fin de inciación de variables</li>
+            <li>Repetir</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "¿QUE ELIJE HACER?";</li>
+            <li>Escribir "(S).Para ingresar un vehiculo";</li>
+            <li>Escribir "(C) Consultar Parqueadero";</li>
+            <li>Escribir "(R) Retirar Vehículo";</li>
+            <li>Escribir "(N) Para Continuar";</li>
+            <li>Escribir "(Q) Para Salir del Sistema";</li>
+            <li>Leer opcion;</li>
+            <li>//codigo de ingreso de Vehículos</li>
+            <li>Si opcion = "S" o opcion = "s"  Entonces</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Hasta ahora han ingresado: ",  ingreso , " Vehículos";</li> 
+            <li>Escribir "Indique en que puesto del parqueadero dese usar";</li>
+            <li>Escribir "1. Parqueadero A-1"; sin saltar	Si placa1 = "Vacio" Entonces Escribir " (Disponible) "; SiNo Escribir " (Ocupado) "; FinSi</li>
+            <li>Escribir "2. Parqueadero A-2"; sin saltar	Si placa2 = "Vacio" Entonces Escribir " (Disponible) "; SiNo Escribir " (Ocupado) "; FinSi</li>
+            <li>Escribir "3. Parqueadero A-3"; sin saltar	Si placa3 = "Vacio" Entonces Escribir " (Disponible) "; SiNo Escribir " (Ocupado) "; FinSi</li>
+            <li>Escribir "4. Parqueadero A-4"; sin saltar	Si placa4 = "Vacio" Entonces Escribir " (Disponible) "; SiNo Escribir " (Ocupado) "; FinSi</li>
+            <li>Escribir "5. Parqueadero A-5"; sin saltar	Si placa5 = "Vacio" Entonces Escribir " (Disponible) "; SiNo Escribir " (Ocupado) "; FinSi</li>
+            <li>Leer opcion2;</li>	
+            <li>Si ingreso  <> 5  Entonces</li>
+            <li>Segun opcion2 Hacer</li>
+            <li>1:</li>
+            <li>ingreso <- ingreso + 1;</li>
+            <li>Escribir "Ingrese la Placa del Vehículos ";</li>
+            <li>leer placa1;</li>
+            <li>Escribir "Ingrese la Marca del Vehículo ";</li>
+            <li>Leer marca1;</li>
+            <li>Escribir "Ingrese nombre del conductor ";</li>
+            <li>Leer nombre1;</li>
+            <li>Escribir "Ingrese el Teléfono del Conductor ";</li>
+            <li>Leer tlf1;</li>
+            <li>Escribir "Ingrese  fecha y Hora de Entrada";</li>
+            <li>Leer fechayhorain1;</li>
+            <li>2:</li>
+            <li>ingreso <- ingreso + 1;</li>
+            <li>Escribir "Ingrese la Placa del Vehículos ";</li>
+            <li>leer placa2;</li>
+            <li>Escribir "Ingrese la Marca del Vehículo ";</li>
+            <li>Leer marca2;</li>
+            <li>Escribir "Ingrese nombre del conductor ";</li>
+            <li>Leer nombre2;</li>
+            <li>Escribir "Ingrese el Teléfono del Conductor ";</li>
+            <li>Leer tlf2;</li>
+            <li>Escribir "Ingrese  fecha y Hora de Entrada";</li>
+            <li>Leer fechayhorain2;</li> 
+            <li>3:</li>
+            <li>ingreso <- ingreso + 1;</li>
+            <li>Escribir "Ingrese la Placa del Vehículos ";</li>
+            <li>leer placa3;</li>
+            <li>Escribir "Ingrese la Marca del Vehículo ";</li>
+            <li>Leer marca3;</li>
+            <li>Escribir "Ingrese nombre del conductor ";</li>
+            <li>Leer nombre3;</li>
+            <li>Escribir "Ingrese el Teléfono del Conductor ";</li>
+            <li>Leer tlf3;</li>
+            <li>Escribir "Ingrese  fecha y Hora de Entrada";</li>
+            <li>Leer fechayhorain3;</li>
+            <li>4:</li>
+            <li>ingreso <- ingreso + 1;</li>
+            <li>Escribir "Ingrese la Placa del Vehículos ";</li>
+            <li>leer placa4;</li>
+            <li>Escribir "Ingrese la Marca del Vehículo ";</li>
+            <li>Leer marca4;</li>
+            <li>Escribir "Ingrese nombre del conductor ";</li>
+            <li>Leer nombre4;</li>
+            <li>Escribir "Ingrese el Teléfono del Conductor ";</li>
+            <li>Leer tlf4;</li>
+            <li>Escribir "Ingrese  fecha y Hora de Entrada";</li>
+            <li>Leer fechayhorain4;</li>
+            <li>5:</li>
+            <li>ingreso <- ingreso + 1;</li>
+            <li>Escribir "Ingrese la Placa del Vehículos ";</li>
+            <li>leer placa5;</li>
+            <li>Escribir "Ingrese la Marca del Vehículo ";</li>
+            <li>Leer marca5;</li>
+            <li>Escribir "Ingrese nombre del conductor ";</li>
+            <li>Leer nombre5;</li>
+            <li>Escribir "Ingrese el Teléfono del Conductor ";</li>
+            <li>Leer tlf5;</li>
+            <li>Escribir "Ingrese  fecha y Hora de Entrada";</li>
+            <li>Leer fechayhorain5;</li>
+            <li>FinSegun</li>
+            <li>SiNo</li>
+            <li>Escribir "No puede Ingresar más Vehículos, parqueadero lleno";</li>
+            <li>FinSi</li>
+            <li>FinSi</li>
+            <li>//fin de ingreso de vehículos</li>
+            <li>//codigo de consulta de Vehículos</li>
+            <li> Si opcion = "c" o opcion = "C" Entonces</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "                                 CONSULTA DE VEHÍCULOS ";</li>
+            <li>Escribir "                           Vehículos ingresados en Parqueadero ";</li>
+            <li> Escribir " ______________________________________________________________";</li>
+            <li>Escribir " ";</li>
+            <li>Si placa1 = "Vacio" Entonces</li>
+            <li>Escribir "Parqueadero A-1 ( Disponible )";</li>
+            <li>SiNo</li>
+            <li>Escribir "Parqueadero A-1";</li>
+            <li>Escribir "   Placa: ", placa1, " --- Marca: " , marca1 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre1;</li> 
+            <li>Escribir "   Teléfono de conductor: ", tlf1,;</li>
+            <li>Escribir "   Fecha y hora de entrada: ", fechayhorain1;</li>
+            <li>si fechayhorasal1 <> "Vacio" Entonces</li>
+            <li>Escribir "   Fecha y hora de Retiro ", fechayhorasal1;</li>
+            <li>FinSi</li>
+            <li>FinSi	</li>
+            <li>Escribir " ______________________________________________________________";</li>
+            <li>Escribir " ";</li>
+            <li>Si placa2 = "Vacio" Entonces</li>
+            <li>scribir "Parqueadero A-2 ( Disponible )";</li>
+            <li>SiNo</li>
+            <li>Escribir "Parqueadero A-2";</li>
+            <li>Escribir "   Placa: ", placa2, " --- Marca: " , marca2 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre2;</li>
+            <li>Escribir "   Teléfono de conductor: ", tlf2,;</li>
+            <li>Escribir "   Fecha y hora de entrada: ", fechayhorain2;</li>
+            <li>si fechayhorasal2 <> "Vacio" Entonces</li>
+            <li>Escribir "   Fecha y hora de Retiro ", fechayhorasal2;</li>
+            <li>FinSi</li>
+            <li>FinSi</li>
+            <li>Escribir " ______________________________________________________________";</li>
+            <li>Escribir " ";</li>
+            <li>Si placa3 = "Vacio" Entonces</li>
+            <li>Escribir "Parqueadero A-3 ( Disponible )";</li>
+            <li>SiNo</li>
+            <li>Escribir "Parqueadero A-3 ";</li>
+            <li>Escribir "   Placa: ", placa3, " --- Marca: " , marca3 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre3;</li> 
+            <li>Escribir "   Teléfono de conductor: ", tlf3,;</li>
+            <li>Escribir "   Fecha y hora de entrada: ", fechayhorain3;</li>
+            <li>si fechayhorasal3 <> "Vacio" Entonces</li>
+            <li>Escribir "   Fecha y hora de Retiro ", fechayhorasal3;</li>
+            <li>FinSi</li>
+            <li>FinSi</li>
+            <li>Escribir " ______________________________________________________________";</li>
+            <li>Escribir " ";</li>
+            <li>Si placa4 = "Vacio" Entonces</li>
+            <li>Escribir "Parqueadero A-4 ( Disponible )";</li>
+            <li>SiNo</li>
+            <li>Escribir "Parqueadero A-4 ";</li>
+            <li>Escribir "   Placa: ", placa4, " --- Marca: " , marca4 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre4;</li> 
+            <li>Escribir "   Teléfono de conductor: ", tlf4,;</li>
+            <li>Escribir "   Fecha y hora de entrada: ", fechayhorain4;</li>
+            <li>si fechayhorasal4 <> "Vacio" Entonces</li>
+            <li>Escribir "   Fecha y hora de Retiro ", fechayhorasal4;</li>
+            <li>FinSi</li>
+            <li>FinSi</li>
+            <li>Escribir " ______________________________________________________________";</li>
+            <li>Escribir " ";</li>
+            <li> Si placa5 = "Vacio" Entonces</li>
+            <li>Escribir "Parqueadero A-5 ( Disponible )";</li>
+            <li>SiNo</li>
+            <li>Escribir "Parqueadero A-5 ";</li>
+            <li>Escribir "5. Placa: ", placa5, " --- Marca: " , marca5 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre5; </li>
+            <li>Escribir "   Teléfono de conductor: ", tlf5,;</li>
+            <li>Escribir "   Fecha y hora de entrada: ", fechayhorain5;</li>
+            <li>si fechayhorasal5 <> "Vacio" Entonces</li>
+            <li>Escribir "   Fecha y hora de Retiro ", fechayhorasal5;</li>
+            <li>FinSi</li>
+            <li> FinSi</li>
+            <li>Escribir " ______________________________________________________________";</li>
+            <li>Escribir " ";</li>
+            <li>Escribir "(N) Para Continuar";</li>
+            <li>leer opcion;</li>
+            <li> FinSi</li>
+            <li>//fin de consulta de Vehículos	</li>
+            <li>//codigo de retiro de vehiculos</li>
+            <li>Si opcion = "r" o opcion = "R" Entonces</li>
+            <li>Escribir "Retirada de Vehiculos";</li>
+            <li>Escribir  "Por favor imgrese la placa del Vehiculo a retirar";</li>
+            <li>Leer retirar;</li>
+            <li>Si retirar = placa1 Entonces</li>
+            <li>Escribir "Ingresa la Hora de retiro";</li>
+            <li>leer fechayhorasal1;</li>
+            <li>SiNo</li>
+            <li>Si retirar = placa2 Entonces</li>
+            <li>>Escribir "Ingresa la Hora de retiro";</li>
+            <li>leer fechayhorasal2;</li>
+            <li>iNo</li>
+            <li>Si retirar = placa3 Entonces</li>
+            <li>scribir "Ingresa la Hora de retiro";</li>
+            <li>leer fechayhorasal3;</li>
+            <li>SiNo</li>
+            <li>Si retirar = placa4 Entonces</li>
+            <li>Escribir "Ingresa la Hora de retiro";</li>
+            <li>leer fechayhorasal4;</li>
+            <li>SiNo</li>
+            <li>Si retirar = placa5 Entonces</li>
+            <li>Escribir "Ingresa la Hora de retiro";</li>
+            <li>leer fechayhorasal5;</li>
+            <li>SiNo</li>
+            <li>Escribir "La Placa que intrudujo no es correcto";</li>
+            <li>Escribir "(N) Para Continuar";</li>
+            <li>leer opcion;</li>
+            <li>FinSi</li>
+            <li>FinSi	</li>
+            <li>FinSi</li>
+            <li> FinSi</li>
+            <li> FinSi</li>
+            <li>FinSi</li>
+            <li>//fin de retiro de vehículo</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Si ingreso = 5 Entonces</li>
+            <li>Escribir "El Parqueadero esta lleno no puede ingresar más Vehículos";</li>
+            <li>Escribir "Los Vehículos ingresados son: ";</li>
+            <li>Escribir "1. Placa: ", placa1, " Marca: " , marca1 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre1;</li>
+            <li>Escribir "   Teléfono de conductor: ", tlf1,;</li>
+            <li>Escribir "   Fecha y hora de entrada: ", fechayhorain1;</li>
+            <li>Escribir " ";</li>
+            <li>Escribir "2. Placa: ", placa2, " Marca: " , marca2 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre2; </li>
+            <li>Escribir "   Teléfono de conductor: ", tlf2,;</li>
+            <li>Escribir "   Fecha y hora de entrada: ", fechayhorain2;</li>
+            <li>Escribir " ";</li>
+            <li>Escribir "3. Placa: ", placa3, " Marca: " , marca3 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre3; </li>
+            <li>Escribir "   Teléfono de conductor: ", tlf3,;</li>
+            <li>Escribir "   Fecha y hora de entrada: ", fechayhorain3;</li>
+            <li>Escribir " ";</li>
+            <li>Escribir "4. Placa: ", placa4, " Marca: " , marca4 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre4;</li>
+            <li>Escribir "   Teléfono de conductor: ", tlf4,;</li>
+            <li>Escribir "   Fecha y hora de entrada: ", fechayhorain4;</li>
+            <li>Escribir " ";</li>
+            <li>Escribir "5. Placa: ", placa5, " Marca: " , marca5 ;</li>
+            <li>Escribir "   Nombre de conductor: ", nombre5; </li>
+            <li>Escribir "   Teléfono de conductor: ", tlf5,;</li>
+            <li>>Escribir "   Fecha y hora de entrada: ", fechayhorain5;</li>
+            <li>Escribir " ";</li>
+            <li>Escribir "El Parqueadero esta lleno no puede ingresar más Vehículos";</li>
+            <li>Escribir "(N) Para Continuar";</li>
+            <li>leer opcion;</li>
+            <li>FinSi</li>
+            <li>//fin de parquedero lleno		
+            <li>	//codigo de parquedero lleno</li>
+            <li>Hasta Que opcion = "Q" o opcion = "q";	</li>  
+              FinProceso 
+        </ul>
+     </nav>
+     
+</nav>
+
+</nav>
+<section class="caja_links">
+  <nav class="links">
+    <button class="boton2"><a href="../portafolio.html" >Volver a Principal</a></button> 
+    
+  </nav></section>
+</article>
+
+	</section>
+
+	<footer>
+        <table>
+          <tr><th colspan="3"><h1>Redes sociales</h1>
+            <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4></td></td></tr>
+          <tr>
+            <td><h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="../imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4></td>
+            <td><h4 align="center"><a href="http://facebook.com">
+              <img src="../imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4></td>
+            <td><h4 align="center"><a href="http://instagram.com">
+              <img src="../imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4></td>
+          </tr>
+            </table>
+      </footer>
+</body>
+</html>

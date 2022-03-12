@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+	<title>Cantera 1 Taller 2 Ejercicio 8</title>
+</head>
+<body>
+
+	<section id="contenedor_ultra2">
+<nav id="titulo">Taller 2 PSeint</nav>
+
+
+<article id="Container">
+
+<section id="subtitulo">CICLOS</section>
+<nav id="caja3_ultra2">
+	<div id="subtitulo">Ejercicio # 8</div>
+     <br>
+      <p>5. 8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le
+        permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta
+        tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se
+        requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas
+        que se registren diariamente.</p>
+     <nav id="caja4_ultra2">
+       <p>Código Pseint</p>
+          <ul>
+            Proceso AppPastelero
+  <li>Definir nombre Como Caracter;</li>
+  <li>Definir  opcion Como Entero;</li>
+  <li>Definir  opcion2 Como Entero;</li>
+  <li>Definir  opcion3 Como Entero;</li>
+  <li>Definir  opcion4 Como Entero;</li>
+  <li>Definir  opcion5 Como Entero;</li>
+  <li>Definir  escojer Como Entero;</li>
+ <li> Definir pedido Como Caracter;</li>
+  <li>Definir forma Como Caracter;</li>
+  <li>Definir sabor Como Caracter;</li>
+  <li>Definir relleno Como Caracter;</li>
+  <li>Definir  comentario Como Caracter;</li>
+  <li>Definir Torta Como Caracter;</li>
+  <li>Definir direccion Como Caracter;</li>
+  <li>Definir precio Como Real;</li>
+  <li>Definir clave Como Entero;</li>
+  <li>Definir pass Como Entero;</li>
+  <li>Definir cant Como Entero;</li>
+  <li>clave <- 12345;</li>
+  <li>Escribir "Bienvenidos a Su *Pasteleria Don Carlos*";</li>
+  <li>Escribir "Indique su Nombre y Apellido por favor";</li>
+  <li>Leer nombre;</li>
+  <li>//COMIENZA EL AREA DE OPCIONES PRINCIPALES </li>
+  <li>Escribir "Saludos Sr(a) ", nombre ,  " le damos una cordial Bienvenida elija su opción " ;</li>
+  <li>Escribir "1. Realizar un pedido";</li>
+  <li>Escribir "2. Consultar la Lista de Productos Disponibles ";</li>
+  <li>Escribir "3. Venta Diaria"; </li>
+  <li>Leer escojer;</li>
+  <li>Limpiar Pantalla;</li>
+  <li>//Comienza la selección de pedidos</li>
+  <li>Segun escojer Hacer</li>
+    <li>1:</li>
+      <li>Escribir "Sr(a) ", nombre , " Indiquenos su pedido ";</li>
+     <li> Escribir "Elija una Opción";</li>
+      <li>Escribir "1. Tortas ";</li>
+      <li>Escribir "2. Muffins ";</li>
+      <li>Escribir "3. Postres Frios";  </li>
+     <li>Leer opcion;</li>
+      <li>Si opcion = 1 Entonces</li>
+       <li> pedido <- "Torta";</li>
+      <li>SiNo</li>
+        <li>Si opcion = 2 Entonces</li>
+          <li>pedido <- "Muffins";</li>
+        <li>SiNo</li>
+          <li>pedido <- "Postres Frios";</li>
+        FinSi</li>
+      <li>FinSi</li>
+      <li>Limpiar Pantalla;</li>
+       <li>//comeinza el pedido de forma de tortas</li>
+      <li>Segun opcion Hacer</li>
+       <li> 1:</li>
+         <li> Escribir "Area de  Tortas Sr(a) ", nombre, " por favor elija la forma que desea";</li>
+          <li>Escribir "1. Redonda";  </li>
+          <li>Escribir "2. Cuadrada ";</li>
+          <li>Escribir "3. Rectangular";</li>
+          <li>Leer opcion2;</li>
+          <li>Limpiar Pantalla;</li>
+           <li> Si opcion2 = 1 Entonces</li>
+               <li> forma <- "Redonda";</li>
+            <li>SiNo</li>
+              <li>Si opcion2 = 2 Entonces</li>
+                <li>forma <- "Cuadrada";</li>
+              <li>Sino  </li>
+                <li>Si opcion2 = 3 Entonces </li>
+                  <li>forma <- "Rectangular";</li>
+                <li>FinSi </li>
+              <li>FinSi</li>
+            <li>FinSi</li>
+            <li>Escribir "Sr(a) ", nombre , "Su pedido hasta ahora ha sido " , pedido, " ",  forma;</li>
+            <li>//fin de pedido de forma tortas</li>
+            <li>//comienza el pedido de sabores de tortas</li>
+            <li>Escribir "Indique ahora el Sabor de su preferencia";</li>
+            <li>Escribir "1. Fresa";  </li>
+            <li>Escribir "2. Chocolate ";</li>
+            <li>Escribir "3. Vainilla";</li>
+            <li>Escribir "4  Limón ";</li>
+            <li>Leer opcion3;</li>
+              <li>Si opcion3 = 1 Entonces</li>
+               <li> sabor<- "Fresa";</li>
+             <li> SiNo</li>
+               <li> Si opcion3 = 2 Entonces</li>
+                 <li> sabor <- "Chocolate";</li>
+                <li>SiNo</li>
+                  <li>Si opcion3 = 3 Entonces</li>
+                   <li> sabor <- "Vainillas";</li>
+                 <li> SiNo</li>
+                    <li>sabor <- "Limón";</li>
+                  <li>FinSi</li>
+                <li>FinSi</li>
+              <li><li>FinSi</li>
+          <li>Limpiar Pantalla;</li>
+          <li>Escribir "Sr(a) ", nombre , " Su pedido hasta ahora ha sido " , pedido, " " ,forma, " de ", sabor;</li>
+          <li>//finalizacion del area de Sabores de tortas</li>
+          <li>//comienza opcioines de rellenos de tortas</li>
+          <li>Escribir "Indique ahora si desea la Torta con relleno";</li>
+          <li>Escribir "1. Si"; </li>
+          <li>Escribir "2. no";</li>
+          <li>Leer opcion4;</li>
+            <li>Si opcion4 = 1 Entonces</li>
+             <li> relleno <- "con relleno";</li>
+             <li> precio <- 12000;</li>
+            <li>SiNo</li>
+             <li> relleno <- "Sin relleno";</li>
+             <li> precio <- 8000;</li>
+            <li>FinSi</li>
+          <li>Limpiar Pantalla;</li>
+          <li>Escribir "Su pedido ha sido registrado";</li>
+          <li>Escribir "Sr(a) ", nombre , " Su pedido es: " , pedido, " " ,forma, " de ", sabor ," ", relleno;</li>
+          <li>//fin de rellenos tortas</li>
+         <li> //peticiones de  información paara envio de tortas</li>
+          <li>Escribir  "Por Favor indiquenos la dirección donde quiere que envien su pedido ";</li>
+          <li>Leer direccion;</li>
+          <li>Limpiar Pantalla;</li>
+          <li>Escribir "Sr(a) ", nombre , " Su pedido es: " , pedido, " " ,forma, " de ", sabor ," ", relleno;</li>
+         <li>Escribir "Y será enviado a la Dirección ", direccion;</li>
+         <li>Escribir " Precio a Pagar es: " , precio, " mil pesos ", ;</li>
+          <li>Escribir "Muchas Gracias por su compra";</li>
+          <li>//final de pedidos de tortas</li>
+        <li>2:</li>
+          <li>//co0mienzop codigo de los Muffins</li>
+           <li> Escribir "Bienvenido a la Venta de  Muffins Sr(a) ", nombre, " por favor elija la sabor que desea";</li>
+          <li>Escribir "1. Chocolate "; </li>
+          <li>Escribir "2. Vainilla ";</li>
+         <li> Leer opcion2;</li>
+          <li>Limpiar Pantalla;</li>
+            <li>Si opcion2 = 1 Entonces</li>
+              <li>sabor<- "Chocolate";</li>
+            <li>SiNo</li>
+              <li>Si opcion2 = 2 Entonces</li>
+                <li>sabor <- "Vainilla";</li>
+              <li>FinSi</li>
+            <li>FinSi</li>
+            <li>Escribir "¿Cual es la cantidad de Muffins de ", sabor," desea llevar?";</li>
+            <li>Leer cant;</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Indique ahora si desea la que lleven chispas sus Muffins";</li>
+            <li>Escribir "1. Si"; </li>
+            <li>Escribir "2. no";</li>
+            <li>Leer opcion4;</li>
+            <li>Definir chispas Como Caracter;</li>
+            <li>Definir preciochispas Como Entero;</li>
+            <li>Definir preprecio Como Entero;</li>
+            <li>Si opcion4 = 1 Entonces</li>
+              <li>preciochispas <- 500 * cant;</li>
+              <li>preprecio <- 2000 * cant;</li>
+              <li>precio <- preprecio + preciochispas;</li>
+              <li>chispas <- "Con chispas";</li>
+            <li>SiNo  </li>
+              <li>chispas <- "sin chispas";</li>
+              <li>precio <- 2000 * cant;</li>
+            <li>FinSi</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Su pedido ha sido registrado";</li>
+            <li>Escribir "Sr(a) ", nombre , " Su pedido es: " , cant , " " , pedido, " " , sabor , " " ,chispas;</li>
+            <li>Escribir  "Por Favor indiquenos la dirección donde quiere que envien su pedido ";</li>
+            <li>Leer direccion;</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Sr(a) ", nombre , " Su pedido es cantidad de; " , cant, " " , pedido, " " ,sabor, " ", chispas;</li>
+            <li>Escribir "Y será enviado a la Dirección ", direccion;</li>
+            <li>Escribir " Precio a Pagar es: " , precio, " mil pesos ", ;</li>
+           <li> Escribir "Muchas Gracias por su compra";</li>
+          <li>//Fin de pedido de Muffins</li>
+        <li>3:  </li>
+          <li>//Inicio de pedido de Postres frios</li>
+         <li> Escribir "Bienvenido a la Venta de  postes Frios Sr(a) ", nombre, "por favor elija la sabor que desea";</li>
+          <li>Escribir "1. Chocolate "; </li>
+          <li>Escribir "2. Fresa ";</li>
+          <li>Escribir "3. Tres Leches";</li>
+          <li>Leer opcion;</li>
+          <li>pedido <- "Postres Frios";</li>
+          <li>Definir postre Como Caracter;</li>
+          <li>Si opcion = 1 Entonces</li>
+            <li>postre <- "Chocolate";</li>
+            <li>precio <- 4000;</li>
+          <li>SiNo</li>
+            <li>Si opcion = 2 Entonces</li>
+              <li>postre <- "Fresa";</li>
+              <li>precio <- 5000;</li>
+            <li>SiNo</li>
+              <li>Si opcion = 3 Entonces</li>
+                <li>postre <- "Tres leches";</li>
+                <li>precio <- 7000;</li>
+              <li>FinSi</li>
+            <li>FinSi</li>
+          <li>FinSi</li>
+          <li>Limpiar Pantalla;</li>
+          <li>Escribir "Su pedido ha sido registrado";</li>
+          <li>Escribir "Sr(a) ", nombre , " Su pedido es: 1 " , pedido, " de " , postre;</li>
+          <li>Escribir  "Por Favor indiquenos la dirección donde quiere que envien su pedido ";</li>
+          <li>Leer direccion;</li>
+          <li>Limpiar Pantalla;</li>
+          <li>Escribir "Sr(a) ", nombre , " Su pedido es 1 " , pedido, " de " ,postre;</li>
+          <li>Escribir "Y será enviado a la Dirección ", direccion;</li>
+          <li>Escribir " Precio a Pagar es: " , precio, " mil pesos ", ;</li>
+          <li>Escribir "Muchas Gracias por su compra";</li>
+      <li>FinSegun</li>
+      <li>//fin de postres</li>
+    <li>2:</li>
+      <li>//comienzo codigo de  Consultas de productos</li>
+     <li>Escribir "Saludos Sr(a) ", nombre ,  " le damos una cordial Bienvenida elija su opción " ;</li>
+     <li>Escribir "1. Tortas ";</li>
+      <li>Escribir "2. Muffins ";</li>
+      <li>Escribir "3. Postres Frios";</li>
+      <li>Leer opcion;</li>
+      <li>egun opcion Hacer</li>
+        <li>1:</li>
+        <li>//comienzo de codigo para consulta de Tortas</li>
+          <li>Escribir " Sr(a) ", nombre ,  "En nuestros opciones de Tortas tenemos";</li>
+         <li> Escribir "Tortas de Chocolate";</li>
+         <li> Escribir "Tortas de Vainilla";</li>
+          <li>Escribir "Tortas de mantecado";</li>
+          <li>Escribir "Sus Formas pueden ser redondas, Cuadradas o rectangulares";</li>
+          <li>Escribir "y puede elegir entre rellenas o no ";</li>
+          <li>Escribir "Si desea realizar un pedido vaya a la opción realizar pedidos y siga las instrucciones";</li>
+          <li>Escribir "Muchas gracias por preferirnos";</li>
+         <li>//fin de consulta de Tortas</li>
+        <li>2:</li>
+          <li>//comienzo de consultas de Muffins</li>
+          <li>Escribir " Sr(a) ", nombre ,  "En nuestros opciones de Tortas Muffins";</li>
+         <li>Escribir "Muffins de Chocolate";</li>
+         <li>Escribir "Muffins de Vainilla";</li>
+          <li>Escribir "Los mismos vienen relleno de crema del sabor pedido ";</li>
+          <li>Escribir "así mismo tiene la opción de pedirlos con chispas o sin chispas";</li>
+          <li>Escribir "Si desea realizar un pedido vaya a la opción realizar pedidos y siga las instrucciones";</li>
+          <li>Escribir "Muchas gracias por preferirnos";</li>
+          <li>//fin de consulta de muffins</li>
+        <li>3:</li>
+          <li>//comienzo de consulta de  Postres frios</li>
+          <li>Escribir " Sr(a) ", nombre ,  "En nuestros opciones de Postres Frios";</li>
+          <li>Escribir "Postres Frios de Chocolate";</li>
+          <li>Escribir "Postres Frios de Fresa";</li>
+          <li>Escribir "Postres Frios de tres Leches";</li>
+          <li>Escribir "Si desea realizar un pedido vaya a la opción realizar pedidos y siga las instrucciones";</li>
+          <li>Escribir "Muchas gracias por preferirnos";</li>
+          <li>//fin de consultas tortas frias</li>
+      <li>FinSegun</li>
+    <li>3: </li>
+      <li>//comienzo de consulta de ventas diarias</li>
+      <li>Limpiar Pantalla;</li>
+      <li>Escribir "Bienvenido Sr(a) " , nombre;</li>
+      <li>Escribir "Este area es para empleados, elija una opcion"; </li>
+      <li>Escribir "1. Empleado";</li>
+      <li>Escribir "2. Cliente ";</li>
+      <li>Leer opcion5;</li>
+      <li>Limpiar Pantalla;</li>
+      <li>Si opcion5 = 1 Entonces</li>
+        <li>Escribir "Coloque la Clave de Acceso";</li>
+        <li>Leer pass;</li>
+        <li>Si pass = clave  Entonces</li>
+          <li>Escribir "Bienvenido Sr(a) " , nombre , " Acceso Permitido al area de venta Diaria"; </li>
+        <li>SiNo</li>
+          <li>Escribir "Sr(a) " , nombre , " Acceso denegado Clave de Acceso Errada "; </li>
+        <li>FinSi</li>
+      <li>SiNo</li>
+        <li>Escribir "Estimado Cliente este módulo es solo para Empleados";</li>
+        <li>Escribir "Lamentamos los incoveniente";</li>
+        <li>Escribir "Si desea realizar un pedido vaya a la opción realizar pedidos y siga las instrucciones";</li>
+        <li>Escribir "Muchas gracias por preferirnos";</li>
+      <li>FinSi</li>
+      <li>//fin de ventas diarias</li>
+FinSegun<br>
+FinProceso
+
+        </ul>
+     </nav>
+     
+</nav>
+
+</nav>
+<section class="caja_links">
+  <nav class="links">
+    <button class="boton2"><a href="../portafolio.html" >Volver a Principal</a></button> 
+    
+  </nav></section>
+</article>
+
+	</section>
+
+	<footer>
+        <table>
+          <tr><th colspan="3"><h1>Redes sociales</h1>
+            <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4></td></td></tr>
+          <tr>
+            <td><h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="../imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4></td>
+            <td><h4 align="center"><a href="http://facebook.com">
+              <img src="../imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4></td>
+            <td><h4 align="center"><a href="http://instagram.com">
+              <img src="../imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4></td>
+          </tr>
+            </table>
+      </footer>
+</body>
+</html>

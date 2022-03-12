@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>Hoja de Vida</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción de Hoja de Vida Taller de Html cantera 1">   
+<style type="text/css">
+
+body{
+  font-family:helvetica, verdana; 
+  background-color: #6F6F6F;
+}
+
+a{
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
+
+}
+
+#contenedor{
+  margin:0px 30px 30px 30px;
+  color:#000000;
+ 
+  height: 350px;
+  
+}
+#container{
+
+  margin:30px 30px 30px 30px;
+  color:#000000;
+  height: 80px;
+  width: 740px;
+  
+  
+}
+
+#caja1 {
+  margin:2px 5px 2px 5px;
+  color:#fff;
+  border:1px solid #000000;
+  width: 39%;
+  height:265px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #333333;
+  float: left ;
+  border-radius: 15px;
+  box-shadow: 8px 10px 10px black;
+}
+#caja2 {
+  margin:2px 4px 2px 4px;
+  border:1px solid #fffff;
+  width: 240px;
+  height: 270px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #333333;
+  float:left ;
+  border-radius: 10px;
+  box-shadow: 8px 10px 10px black;
+}
+#caja3 {
+  margin:2px 5px 2px 5px;
+  color:#000000;
+  border:1px solid #000000;
+  width: 39%;
+  height:265px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #0087A0;
+  float: left ;
+  border-radius: 15px;
+  box-shadow: 8px 10px 10px black;
+}
+
+#titulo{
+  font-size:35px;
+  font-weight:bold; 
+  text-align:center;
+  text-shadow:2px 2px #CCCCCC;
+  box-shadow: 2px 8px 5px black;
+  margin-bottom:20px;
+  margin-top:10px;
+  padding:0px;
+}
+img#foto{
+  float:left;
+  padding:2px;
+}
+p{
+  text-align:justify; 
+  font-size:14px;   
+  text-indent:40px;
+}
+font {
+
+  text-shadow: 1px 1px 8px;
+}
+.caja_links{
+  margin:10px 30px 10px 30px;
+  color:#000000;
+  width: 90%;
+  height: 60px;
+  
+
+  }
+
+.links{
+  margin:5px 40px 5px 40px;
+  font-size:15px;
+  padding:0px;
+  float:left ;
+}   
+
+.boton {
+  margin:5px 19px 5px 19px;
+  background-color: #333333;
+  color: #fff;
+  height: 40px;
+  width: 15%;
+  float:left ;
+  border-radius: 17px;
+  border-color: black ;
+  box-shadow: 6px 10px 10px black;
+  font-size: 10;
+ text-align:center;
+}
+
+.boton:hover {
+   box-shadow: 7px 9px 15px black inset;
+   background-color: #0087A0;
+}
+
+
+.boton2 {
+  margin:5px 500px 5px 500px;
+  background-color: #0087A0;
+  color: #fff;
+  height: 40px;
+  width: 200px;
+  float:left ;
+  border-radius: 15px;
+  box-shadow: 6px 10px 10px black;
+
+}
+.boton2:hover {
+   box-shadow: 7px 9px 15px black inset;
+   background-color: #333333;
+}
+footer{
+background-color:#333333;
+box-shadow: 6px 10px 10px black;
+
+}
+h1{
+  color: #fff;
+}
+h4{
+  color: #fff;
+}
+select {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  font-family: inherit;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 0.25rem;
+}
+</style>   
+<script type="text/javascript">
+  function cambioTema(x){
+    console.log(x.value);
+    var body = document.getElementById("body");
+    document.body.style.backgroundColor = x.value;
+}
+
+</script>
+  </head>  
+  <body id="body">  
+      <header align="center">
+        <font size="8px"><b>HOJA DE VIDA<b></font><br>   
+      </header> 
+      <section id="container">
+      <h3>Seleccione cambio de color de fondo</h3>
+      <select name="fondo" id="fondo" onchange="cambioTema(this)">
+         <option value="#6F6F6F">Original</option>
+         <option value="#2d8ff8">Azul</option>
+         <option value="#fd93fd">Lila</option>
+         <option value="#aaf8d8">Verde</option>
+       </select>
+      </section>
+ <section id="contenedor">
+  
+    <section id="titulo">INFORMACIÓN PERSONAL</section>
+      <aside id="caja1">
+        <font size="6px"><br>
+          <b>ELKIN SIERRA<br><BR>
+             HERNANDEZ<br><br>
+         </font>  
+          <font size="5px">
+             Fecha de Nacimiento: 04/11/1974<br>
+             Lugar: Santa Marta, Magdalena.</b>
+          </font>  
+     </aside>
+      <aside id="caja2"><img src="imagenes/imgElkin.jpg" id="foto" alt="foto" width="235px"></aside>
+      <aside id="caja3"><font size="6px"><br>
+          <b>INGENIERO DE SISTEMAS<br><br>
+             </font>  
+          <font size="5px">
+             Técnico Superior Universitario Informática<br><br>
+             Desarrollador App Web<br><br>
+             
+          </font>  </aside>
+   </section>
+     <section class="caja_links">
+          
+               <button class="boton"><a href="index.html">Información Personales</a></button>
+               <button class="boton"><a href="experiencia.html">Experiencia Laboral</a></button>
+               <button class="boton"><a href="referencias.html">Referencias Personales</a></button>
+               <button class="boton"><a href="referfamiliares.html">Referencias Familiares</a></button>
+               <button class="boton"><a href="estudios.html">Estudios realizados</a></button>
+          </nav>
+      </section>
+  <section class="caja_links">
+      <nav class="links">
+        <button class="boton2"><a href="descargas/HV ELKIN SIERRA.pdf" download="HV ELKIN SIERRA.pdf">Descargar Hoja de Vida</a></button>
+      </nav></section>
+    
+
+
+
+       <footer>
+        <table width="90%" align="center">
+          <tr><td colspan="3" align="center"><h1>Redes sociales</h1>
+            <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4></td></td></tr>
+          <tr >
+            <td><h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4></td>
+            <td><h4 align="center"><a href="http://facebook.com">
+              <img src="imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4></td>
+            <td><h4 align="center"><a href="http://instagram.com">
+              <img src="imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4></td>
+          </tr>
+            </table>
+      </footer>
+  </body>  
+</html>

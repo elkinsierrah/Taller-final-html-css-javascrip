@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <title>Taller 3 Ejercicio 8</title>
+</head>
+
+<body>
+
+  <section id="contenedor_ultra2">
+    <nav id="titulo">Taller 3 PSeint</nav>
+
+
+    <article id="Container">
+
+      <section id="subtitulo">CICLOS</section>
+      <nav id="caja3_ultra2">
+        <div id="subtitulo">Ejercicio # 8</div>
+        <br>
+        <p>8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus
+          clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado
+          para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se
+          debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el
+          curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el
+          sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene
+          capacidad máxima de gestionar 8 usuarios en su totalidad.</p>
+        <nav id="caja4_ultra2">
+          <p>Código Pseint</p>
+          <ul>
+            Proceso AppEscuela
+            <li>Definir alumno1, alumno2, alumno3, alumno4, alumno5, alumno6, alumno7, alumno8 Como Caracter;</li>
+            <li>Definir cc1, cc2, cc3, cc4, cc5, cc6, cc7, cc8 Como Caracter;</li>
+            <li>Definir curso1, curso2, curso3, curso4, curso5, curso6, curso7, curso8 Como Caracter;</li>
+            <li>Definir opcion, opcion2 , bcc Como Caracter;</li>
+            <li> Definir ingreso, aprobar Como Entero;</li>
+            <li>//inicialización de variables</li>
+            <li>alumno1 <- "Vacio" ; alumno2 <- "Vacio" ; alumno3 <- "Vacio" ; alumno4 <- "Vacio" ; </li>
+            <li>alumno5 <- "Vacio" ;alumno6 <- "Vacio" ; alumno7 <- "Vacio" ; alumno8<- "Vacio" ;</li> 
+            <li>cc1 <- "Vacio" ; cc2 <- "Vacio" ; cc3<- "Vacio" ; cc4 <- "Vacio" ; cc5 <- "Vacio" ; cc6 <- "Vacio" ;</li>  
+            <li> cc6 <- "Vacio" ; cc7 <- "Vacio" ; cc8 <- "Vacio" ;</li>
+            <li>curso1 <- "Vacio" ; curso2 <- "Vacio" ; curso3 <- "Vacio" ; curso4 <- "Vacio" ; </li>
+            <li>cc6 <- "Vacio" ; curso5 <- "Vacio" ; curso6 <- "Vacio" ; curso7 <- "Vacio" ; curso8 <- "Vacio" ; </li>
+            <li>//fin de inicialización de variables</li>
+            <li>ingreso <- 0;</li>
+            <li>Repetir</li>
+            <li>//Menu de sistemas</li>
+            <li>Escribir "¿Ingrese una opción?";</li>
+            <li>Escribir "(I).Para ingresar un Estudiante";</li>
+            <li>Escribir "(A) Para Aprobar un Estudiante";</li>
+            <li>Escribir "(C) Consultar Licenciados";</li>
+            <li>Escribir "(S) Salir del Sistema";</li>
+            <li>Leer opcion;</li>
+            <li>//Fin de menu de sistema</li>
+            <li>//código para incluir estudiantes</li>
+            <li>Si opcion = "i" o opcion = "I" Entonces</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Ingreso de Estudiantes para el curso de conducción";</li>
+            <li> Si alumno1 = "Vacio" Entonces</li>
+            <li>Escribir "Ingrese el Nombre del Estudiante";</li>
+            <li>eer alumno1;</li>
+            <li>Escribir "Ingrese el Cédula del Estudiante";</li>
+            <li>Leer cc1;</li>
+            <li>curso1 <- "Inscrito" ;</li> 
+              <li>SiNo</li>
+            <li>Si alumno2 = "Vacio" Entonces</li>
+            <li>Escribir "Ingrese el Nombre del Estudiante";</li>
+            <li>Leer alumno2;</li>
+            <li>Escribir "Ingrese el Cédula del Estudiante";</li>
+            <li>Leer cc2;</li>
+            <li>curso2 <- "Inscrito" ; </li>
+              <li>SiNO</li>
+            <li>i alumno3 = "Vacio" Entonces</li>
+            <li>Escribir "Ingrese el Nombre del Estudiante";</li>
+            <li>Leer alumno3;</li>
+            <li>Escribir "Ingrese el Cédula del Estudiante";</li>
+            <li>Leer cc3;</li>
+            <li>curso3 <- "Inscrito" ;</li> 
+              <li> SiNO</li>
+            <li>Si alumno4 = "Vacio" Entonces</li>
+            <li>Escribir "Ingrese el Nombre del Estudiante";</li>
+            <li>Leer alumno4;</li>
+            <li>Escribir "Ingrese el Cédula del Estudiante";</li>
+            <li>Leer cc4;</li>
+            <li>curso4 <- "Inscrito" ; </li>
+              <li>SiNO</li>
+            <li>Si alumno5 = "Vacio" Entonces</li>
+            <li>Escribir "Ingrese el Nombre del Estudiante";</li>
+            <li>Leer alumno5;</li>
+            <li>Escribir "Ingrese el Cédula del Estudiante";</li>
+            <li>Leer cc5;</li>
+            <li>curso5 <- "Inscrito" ; </li>
+            <li>SiNO</li>
+            <li>Si alumno6 = "Vacio" Entonces</li>
+            <li>Escribir "Ingrese el Nombre del Estudiante";</li>
+            <li>Leer alumno6;</li>
+            <li>Escribir "Ingrese el Cédula del Estudiante";</li>
+            <li>Leer cc6;</li>
+            <li>curso6 <- "Inscrito" ;</li> 
+            <li>SiNO</li>
+            <li>Si alumno7 = "Vacio" Entonces</li>
+            <li>Escribir "Ingrese el Nombre del Estudiante";</li>
+            <li>Leer alumno7;</li>
+            <li>Escribir "Ingrese el Cédula del Estudiante";</li>
+            <li>Leer cc7;</li>
+            <li>curso7 <- "Inscrito" ;</li> 
+            <li> SiNO</li>
+              <li> Si alumno8 = "Vacio" Entonces</li>
+              <li>Escribir "Ingrese el Nombre del Estudiante";</li>
+              <li>Leer alumno8;</li>
+              <li> Escribir "</li>Ingrese el Cédula del Estudiante";</li>
+              <li>Leer cc8;
+              <li>curso8 <- "Inscrito" ;</li> 
+              <li>FinSi</li>
+                <li> FinSi</li>
+                <li>FinSi</li>
+                <li> FinSi</li>
+                <li>FinSi</li>
+                <li> FinSi</li>
+                <li> FinSi</li>
+                <li> FinSi</li>
+                <li>FinSi</li>
+                <li>//Fin de Ingreso de estudiantes</li>
+                <li>//Código de Aprobar</li>
+                <li>Si opcion = "A" o opcion = "a" Entonces</li>
+                <li> Escribir " Aprobar Licencia a Estudiantes";</li>
+                <li>Escribir "";</li>
+                <li> Escribir "Ingrese la Cédula del Estudiant</li>
+                <li>Leer bcc;</li>
+                <li>Si bcc = cc1 Entonces</li>
+                <li>Escribir "Indique si el Estudiante Aprueba o Reprueba";</li>
+                <li>Leer curso1;</li>
+                <li> SiNo</li>
+                <li>Si bcc = cc2 Entonces</li>
+                <li> Escribir "Indique si el Estudiante Aprueba o Reprueba";</li>
+                <li>Leer curso2;</li>
+                <li>SiNo</li>
+                <li>Si bcc = cc3 Entonces</li>
+                <li>Escribir "Indique si el Estudiante Aprueba o Reprueba";</li>
+                <li>Leer curso3;</li>
+                <li>SiNo</li>
+                <li>Si bcc = cc4 Entonces</li>
+                <li> Escribir "Indique si el Estudiante Aprueba o Reprueba";</li>
+                <li> Leer curso4;</li>
+                <li> SiNo</li>
+                <li>Si bcc = cc5 Entonces</li>
+                <li>Escribir "Indique si el Estudiante Aprueba o Reprueba";</li>
+                <li>Leer curso5;</li>
+                <li>SiNo</li>
+                <li> Si bcc = cc6 Entonces</li>
+                <li>Escribir "Indique si el Estudiante Aprueba o Reprueba";</li>
+                <li>Leer curso6;</li>
+                <li>SiNo</li>
+                <li> Si bcc = cc7 Entonces</li>
+                <li>Escribir "Indique si el Estudiante Aprueba o Reprueba";</li>
+                <li>Leer curso7;</li>
+                <li>SiNo</li>
+                <li>Si bcc = cc8 Entonces</li>
+                <li> Escribir "Indique si el Estudiante Aprueba o Reprueba";</li>
+                <li> Leer curso8;</li>
+                <li> SiNo</li>
+                <li>Escribir "La Cédula no existe, no se puede generar el cambio";</li>
+                <li>FinSi</li>
+                <li>FinSi</li>
+                <li>FinSi</li>
+                <li>FinSi</li>
+                <li>FinSi</li>
+                <li>FinSi</li>
+                <li>FinSi</li>
+                <li>FinSi</li>
+                <li>Escribir "(N) Para Continuar";</li>
+                <li>leer opcion;</li>
+                <li> Limpiar Pantalla;</li>
+                <li>FinSi</li>
+                <li>//fin de aprobación</li>
+                <li>//inicio de Consulta</li>
+                <li> Limpiar Pantalla;</li>
+                <li>Si opcion = "c" o opcion = "C" Entonces</li>
+                <li> Escribir " Consulta de los Aprobados y los no Aprobados ";</li>
+                <li>Escribir " ";</li>
+                <li>Si alumno1 = "Vacio" Entonces</li>
+                <li> Escribir "";</li>
+                <li>SiNo</li>
+                <li>Escribir "1. Nombre ", alumno1, " CC ", cc1 ;</li>
+                <li>Escribir " Curso de Conducción "</li>;
+                <li>FinSi</li>
+                <li>Si curso1 = "Aprobado" Entonces</li>
+                <li>Escribir "Licencia de Conducir:", curso1 ;</li>
+                <li>SiNo</li>
+                <li>Escribir "Licencia de Conducir: ", curso1 ;</li>
+                <li>FinSi</li>
+                <li>Escribir "_________________________________________________________________";</li>
+                <li>Escribir " ";</li>
+
+                <li> Si alumno2 = "Vacio" Entonces</li>
+                <li> Escribir "";</li>
+                <li>SiNo</li>
+                <li> Escribir "2. Nombre ", alumno2, " CC ", cc2 ;</li>
+                <li> Escribir "Curso de Conducción ";</li>
+                <li> Si curso2 = "Aprobado" Entonces</li>
+                <li> Escribir "Licencia de Conducir:", curso2 ;</li>
+                <li>SiNo</li>
+                <li>Escribir "Licencia de Conducir: ", curso2 ;</li>
+                <li>FinSi</li>
+                <li>Escribir "_________________________________________________________________";</li>
+                <li>Escribir " ";</li>
+                <li>FinSi</li>
+                <li>Si alumno3 = "Vacio" Entonces</li>
+                <li>Escribir "";</li>
+                <li>SiNo</li>
+                <li>Escribir "3. Nombre ", alumno3, " CC ", cc3 ;</li>
+                <li></li>
+                <li>Escribir "Curso de Conducción ";</li>
+                <li> Si curso3 = "Aprobado" Entonces
+                <li>Escribir "Licencia de Conducir:", curso3 ;</li>
+                <li>SiNo</li>
+                <li>Escribir "Licencia de Conducir: ", curso3 ;</li>
+                <li>FinSi</li>
+                <li>Escribir "_________________________________________________________________";</li>
+                <li>Escribir " ";</li>
+                <li> FinSi</li>
+                <li>Si alumno4 = "Vacio" Entonces</li>
+                <li>Escribir "";</li>
+                <li>SiNo</li>
+                <li>Escribir "4. Nombre ", alumno4, " CC ", cc4 ;</li>
+                <li>Escribir "Curso de Conducción ";</li>
+                <li>Si curso4 = "Aprobado" Entonces</li>
+                <li>Escribir "Licencia de Conducir:", curso4 ;</li>
+                <li>SiNo</li>
+                <li>Escribir "Licencia de Conducir: ", curso4 ;</li>
+                <li>FinSi</li>
+                <li>Escribir "_________________________________________________________________";</li>
+                <li>Escribir " ";</li>
+                <li>FinSi</li>
+                <li>Si alumno5 = "Vacio" Entonces</li>
+                <li>Escribir "";</li>
+                <li>SiNo</li>
+                <li>Escribir "5. Nombre ", alumno5, " CC ", cc5 ;</li>
+                <li>Escribir "Curso de Conducción ";</li>
+                <li>Si curso5 = "Aprobado" Entonces</li>
+                <li>Escribir "Licencia de Conducir:", curso5 ;</li>
+                <li>SiNo</li>
+                <li> Escribir "Licencia de Conducir: ", curso5 ;</li>
+                <li>FinSi</li>
+                <li>Escribir "_________________________________________________________________";</li>
+                <li>Escribir " ";</li>
+                <li>FinSi</li>
+                <li> Si alumno6 = "Vacio" Entonces</li>
+                <li>Escribir "";</li>
+                <li> SiNo</li>
+                <li>Escribir "6. Nombre ", alumno6, " CC ", cc6 ;</li>
+                <li>Escribir "Curso de Conducción ";</li>
+                <li>Si curso6 = "Aprobado" Entonces</li>
+                  Escribir "Licencia de Conducir:", curso6 ;</li>
+                <li>SiNo</li>
+                <li>Escribir "Licencia de Conducir: ", curso6 ;</li>
+                <li>FinSi</li>
+                <li>Escribir "_________________________________________________________________";</li>
+                <li>Escribir " ";</li>
+                <li> FinSi</li>
+                <li>Si alumno7 = "Vacio" Entonces</li>
+                <li>Escribir "";</li>
+                <li>SiNo</li>
+                <li> Escribir "7. Nombre ", alumno7, " CC ", cc7 ;</li>
+                <li> Escribir "Curso de Conducción ";</li>
+                <li>Si curso7 = "Aprobado" Entonces</li>
+                <li>Escribir "Licencia de Conducir:", curso7 ;</li>
+                <li> SiNo</li>
+                <li> Escribir "Licencia de Conducir: ", curso7 ;</li>
+                <li>FinSi</li>
+                <li>Escribir "_________________________________________________________________";</li>
+                <li>Escribir " ";</li>
+                <li> FinSi</li>
+                <li>Si alumno8 = "Vacio" Entonces</li>
+                <li>Escribir "";</li>
+                <li>SiNo</li>
+                <li>Escribir "8. Nombre ", alumno8, " CC ", cc8 ;</li>
+                <li>Escribir "Curso de Conducción ";</li>
+                <li>Si curso8 = "Aprobado" Entonces</li>
+                <li>Escribir "Licencia de Conducir:", curso8 ;</li>
+                <li>SiNo</li>
+                <li>Escribir "Licencia de Conducir: ", curso8 ;</li>
+                <li>FinSi</li>
+                <li>Escribir "_________________________________________________________________</li>
+                <li>Escribir " ";</li>
+                <li>FinSi</li>
+                <li>Escribir "(N) Para Continuar";</li>
+                <li>leer opcion;</li>
+                <li> Limpiar Pantalla;</li>
+                <li>FinSi</li>
+                <li>//Fin de consulta</li>
+                <li>Hasta Que opcion = "S" o opcion = "s";</li>
+                  FinProceso
+        </nav>
+
+      </nav>
+
+      </nav>
+      <section class="caja_links">
+        <nav class="links">
+          <button class="boton2"><a href="../portafolio.html">Volver a Principal</a></button>
+
+        </nav>
+      </section>
+    </article>
+
+  </section>
+
+  <footer>
+    <table>
+      <tr>
+        <th colspan="3">
+          <h1>Redes sociales</h1>
+          <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4>
+          </td>
+          </td>
+      </tr>
+      <tr>
+        <td>
+          <h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="../imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4>
+        </td>
+        <td>
+          <h4 align="center"><a href="http://facebook.com">
+              <img src="../imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4>
+        </td>
+        <td>
+          <h4 align="center"><a href="http://instagram.com">
+              <img src="../imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4>
+        </td>
+      </tr>
+    </table>
+  </footer>
+</body>
+
+</html>

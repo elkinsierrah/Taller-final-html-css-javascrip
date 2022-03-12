@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+	<title>Cantera 1 Taller 2 Ejercicio 10</title>
+</head>
+<body>
+
+	<section id="contenedor_ultra2">
+<nav id="titulo">Taller 2 PSeint</nav>
+
+
+<article id="Container">
+
+<section id="subtitulo">CICLOS</section>
+<nav id="caja3_ultra2">
+	<div id="subtitulo">Ejercicio # 10</div>
+     <br>
+      <p>10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una
+          aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta
+          tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar
+          ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores
+          negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p>
+     <nav id="caja4_ultra2">
+       <p>Código Pseint</p>
+          <ul>
+           Proceso Appbancofiel
+  <li>Definir nombre Como Caracter;</li>
+  <li>Definir cc Como Entero;</li>
+  <li>Definir  direc Como Caracter;</li>
+  <li>Definir tipoc Como Caracter;</li>
+  <li>Definir numc Como Caracter;</li>
+  <li>Definir cantidad Como Real;</li>
+ <li>Definir ingreso Como Real;</li>
+ <li>Definir retiro Como Real;</li>
+  <li>Definir opcion Como Entero;</li>
+ <li> Definir opcion2 Como Entero;</li>
+  <li>Definir opcion3 Como Entero;</li>
+  <li>Definir clave Como Entero;</li>
+  <li>Definir pass Como Entero;</li>
+  <li>Definir continuar Como Entero;</li>
+  <li>Definir cambioclave Como Entero;</li>
+  <li>Definir montoret Como Real;</li>
+  <li>pass <- 1234;</li>
+  <li>//código de Empleado</li>
+  <li>Escribir "Bienvenidos a Su Banco Fiel"</li>
+   <li> Escribir "Crear una Cuenta";</li>
+    <li>Escribir "Llene por favor los siguientes datos";</li>
+    <li>Escribir "Ingrese el Nombre Completo del Titular";</li>
+    <li>Leer nombre;</li>
+    <li>Escribir "Ingrese Cédula del Titular";</li>
+    <li>Leer cc;</li>
+    <li>Escribir "Ingrese la Dirección del Titular";</li>
+    <li>Leer direc;</li>
+    <li>Escribir "Ingrese Tipo de Cuenta";</li>
+    <li>Leer tipoc;</li>
+    <li>Escribir "Ingrese Número de Cuenta";</li>
+    <li>Leer numc;</li>
+    <li>Escribir "Ingrese cantidad";</li>
+    <li>Leer cantidad;</li>
+    <li>Limpiar Pantalla;</li>
+    <li>Escribir "   La cuenta ha sido creada satisfactoriamente";</li>
+   <li>Escribir "   Los datos agregados son los siguientes";</li>
+   <li> Escribir "";</li>
+    <li>Escribir "  Nombre del Titular: ", nombre;</li>
+    <li>Escribir "  Cédula del Titular: ", cc;</li>
+    <li>Escribir "  Dirección: ", direc;</li>
+    <li>Escribir "  Tipo de Cuenta: ", tipoc;</li>
+    <li>Escribir "  Cuenta número: ", numc;</li>
+   <li> Escribir "  Cantidad: ", cantidad;</li>
+    <li>Escribir "";</li>
+    <li><li>//Fin codigo de Empleado</li>
+    <li>Escribir "    Desea continuar";</li>
+    <li>Escribir "    1. Si";</li>
+   <li> Escribir "    2. No";</li>
+    <li>Leer continuar;</li>
+   <li> Si continuar = 1 Entonces</li>
+      <li>//Código de cliente</li>
+      <li>Limpiar Pantalla;</li>
+      <li>Escribir "Bienvenidos a Su Banco Fiel";</li>
+      <li>Escribir "Ingrese su clave";</li>
+      <li>Leer clave;</li>
+      <li>Si clave = pass Entonces</li>
+       <li> Limpiar Pantalla;</li>
+        <li>Escribir "         Bienvenidos Sr(A) " , nombre;</li></li>
+        <li>Escribir "           Elija la opción que desea";</li>
+        <li>Escribir "";</li>
+        <li>Escribir "    1.Consulta de cuenta";</li>
+        <li>Escribir "    2 Cambiar Clave";</li>
+        <li>Escribir "    3 Retiro";</li>
+        <li>Leer opcion2;</li>
+        <li>Segun opcion2 Hacer</li>
+          <li>1:</li>
+            <li>Limpiar Pantalla;</li>
+            <li>//Código de consulta</li>
+            <li>Escribir "              Consulta de la cuenta número ", numc;</li>
+            <li>Escribir "";</li>
+            <li>Escribir "      Nombre del Titular:  ", nombre;</li>
+            <li>Escribir "      Monto en la cuenta: " , cantidad;</li>
+            <li>Escribir "";</li>
+            <li>Escribir "               Muchas gracias por Preferirnos";</li>
+            <li>//fin de consulta</li>
+          <li>2:</li>
+           <li> //Código cambio de clave</li>
+           <li> Limpiar Pantalla;</li>
+            <li>Escribir "              Cambio de clave de cuenta número ", numc;</li>
+            <li>Escribir "";
+            <li>Escribir "      Ingrese la clave anterior:";</li>
+            <li>Leer clave;</li>
+                   <li> Si clave = pass Entonces</li>
+                     <li> Escribir "Escriba la clave nueva";</li>
+                     <li> leer cambioclave;</li>
+                      <li>pass <- cambioclave;</li>
+                     <li> Limpiar Pantalla;</li>
+                      <li>Escribir "                 Su Clave ha sido cambia exitosamente";</li>
+                      <li>Escribir "                 Clave Nueva es " ,pass;</li>
+                      <li><li>Escribir "";</li>
+                      <li>Escribir "               Muchas gracias por Preferirnos";</li>
+                    <li>SiNo</li>
+                      <li>Escribir "Clave Errada, No es posible cambiar su clave";</li>
+                    <li>FinSi</li>
+          <li>//fin de cambio de clave</li>
+          <li>3:</li>
+           <li> //Código de retiro</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "                             RETIROS";</li>
+            <li>Escribir "";</li>
+            <li>Escribir "            Elija la cantidad";</li>
+            <li>Escribir "";</li>
+            <li>Escribir "         1.  20.000", "                               5. 400.000  ";</li>
+            <li>Escribir "         2.  50.000", "                               6. 500.000  ";</li>
+            <li>Escribir "         3.  100.000", "                              7. 600.000 ";</li>
+            <li>Escribir "         4.  200.000", "                              8. Otro Monto ";</li>
+            <li>leer opcion3;</li>
+            <li>Segun opcion3 Hacer</li>
+              <li>1:</li>
+                <li>//retiro 200000</li>
+               <li>Limpiar Pantalla;</li>
+                <li>Escribir "                             RETIROS";</li>
+                <li>Escribir "Introduzca la clave";</li>
+                <li>Leer clave;</li>
+                <li>Limpiar Pantalla;</li>
+               <li> Si clave = pass Entonces</li>
+                 <li> retiro <- cantidad - 20000;</li>
+                  <li>cantidad <- retiro;</li>
+                  <li>Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; </li>
+                  <li>Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";</li>
+                 <li>Escribir "";</li>
+                  <li>Escribir "               Muchas gracias por Preferirnos";</li>
+                <li>SiNo</li>
+                 <li> Escribir "     Clave Errada, No es posible  realizar el Retiro";</li>
+                <li>FinSi</li>
+                <li>//fin retiro de 200000</li>
+              <li>2:</li>
+                <li>//retiro 500000</li>
+                <li>Limpiar Pantalla;</li>
+               <li> Escribir "                             RETIROS";</li>
+                <li>Escribir "Introduzca la clave";</li>
+               <li> Leer clave;</li>
+               <li>Limpiar Pantalla;</li>
+                <li>Si clave = pass Entonces</li>
+                  <li>retiro <- cantidad - 50000;</li>
+                  <li>cantidad <- retiro;</li>
+                  <li>Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; </li>
+                  <li>Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";</li>
+                  <li>Escribir "";</li>
+                  <li>Escribir "               Muchas gracias por Preferirnos";</li>
+                <li>SiNo</li>
+                 <li> Escribir "     Clave Errada, No es posible  realizar el Retiro";</li>
+                <li>FinSi</li>
+                <li>//fin retiro de 500000</li>
+              <li>3:</li>
+                <li>//retiro 1000000</li>
+                <li>Limpiar Pantalla;</li>
+                <li>Escribir "                             RETIROS";</li>
+                <li>Escribir "Introduzca la clave";</li>
+                <li>Leer clave;</li>
+                <li>Limpiar Pantalla;
+                <li>i clave = pass Entonces</li>
+                  <li>retiro <- cantidad - 100000;</li>
+                  <li>cantidad <- retiro;</li>
+                 <li> Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; </li>
+                  <li>Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";</li>
+                 <li> Escribir "";</li>
+                 <li> Escribir "               Muchas gracias por Preferirnos";</li>
+                <li>SiNo</li>
+                 <li> Escribir "     Clave Errada, No es posible  realizar el Retiro";</li>
+               <li> FinSi</li>
+               <li> //fin retiro de 1000000</li>
+              <li>4:</li>
+                <li>//retiro 2000000</li>
+                <li>Limpiar Pantalla;</li></li>
+                <li>Escribir "                            RETIROS";</li>
+               <li>Escribir "Introduzca la clave";</li>
+                <li>Leer clave;</li>
+                <li>Limpiar Pantalla;</li>
+                <li>Si clave = pass Entonces</li>
+                 <li> retiro <- cantidad - 200000;</li>
+                 <li> cantidad <- retiro;</li>
+                 <li> Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; </li>
+                 <li> Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";</li>
+                 <li> Escribir "";</li>
+                 <li> Escribir "               Muchas gracias por Preferirnos";</li>
+               <li> SiNo</li>
+                 <li> Escribir "     Clave Errada, No es posible  realizar el Retiro";</li>
+               <li> FinSi</li>
+               <li> //fin retiro de 2000000</li>
+              <li>5:</li>
+                <li>//retiro 4000000</li>
+                <li>Limpiar Pantalla;</li>
+                <li>Escribir "                             RETIROS";</li>
+                <li>Escribir "Introduzca la clave";</li>
+                <li>Leer clave;</li>
+                <li>Limpiar Pantalla;</li>
+                <li>Si clave = pass Entonces</li>
+                  <li>retiro <- cantidad - 400000;</li>
+                  <li>cantidad <- retiro;</li>
+                 <li>Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; </li>
+                 <li> Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";</li>
+                  <li>Escribir "";</li>
+                 <li>Escribir "               Muchas gracias por Preferirnos";</li>
+                <li>SiNo</li>
+                 <li> Escribir "     Clave Errada, No es posible  realizar el Retiro";</li>
+                <li>FinSi</li>
+                <li>//fin retiro de 4000000</li>
+             <li> 6:</li>
+               <li> //retiro 5000000</li>
+               <li>Limpiar Pantalla;</li>
+               <li> Escribir "                             RETIROS";</li>
+               <li> Escribir "Introduzca la clave";</li>
+               <li> Leer clave;</li>
+               <li> Limpiar Pantalla;</li>
+               <li> Si clave = pass Entonces</li>
+                  <li>retiro <- cantidad - 500000;</li>
+                 <li> cantidad <- retiro;</li>
+                 <li> Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; </li>
+                 <li> Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";</li>
+                 <li> Escribir "";</li>
+                 <li> Escribir "               Muchas gracias por Preferirnos";</li>
+                <li>SiNo</li>
+                 <li> Escribir "     Clave Errada, No es posible  realizar el Retiro";</li>
+               <li> FinSi</li>
+               <li> //fin retiro de 5000000</li>
+              <li>7:</li>
+                <li>//retiro 6000000</li>
+                <li>Limpiar Pantalla;</li>
+                <li>Escribir "                           RETIROS";</li>
+                <li>Escribir "Introduzca la clave";</li>
+                <li>Leer clave;</li>
+               <li>Limpiar Pantalla;</li>
+                <li>Si clave = pass Entonces</li>
+                  <li>retiro <- cantidad - 600000;</li>
+                 <li> cantidad <- retiro;</li>
+                 <li> Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; </li>
+                  <li>Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";</li>
+                 <li> Escribir "";</li>
+                  <li>Escribir "               Muchas gracias por Preferirnos";</li>
+               <li>SiNo</li>
+                 <li> Escribir "     Clave Errada, No es posible  realizar el Retiro";</li>
+                <li>FinSi</li>
+               <li> //fin retiro de 6000000</li>
+              <li>8:</li>
+               <li> //retiro otro monto</li>
+               <li> Limpiar Pantalla;</li></li>
+               <li> Escribir "                            RETIROS";</li>
+               <li> Escribir "Introduzca la clave";</li>
+               <li> Leer clave;</li>
+                <li>Limpiar Pantalla;</li>
+                <li>Si clave = pass Entonces</li>
+                  <li>Escribir "Ingrese la cantidad a retirar";</li>
+                 <li>Leer montoret;</li>
+                  <li>retiro <- cantidad - montoret;</li>
+                  <li>cantidad <- retiro;</li>
+                  <li>Limpiar Pantalla;</li>
+                  <li>Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; </li>
+                  <li>Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";</li>
+                 <li> Escribir "";</li>
+                  <li>Escribir "               Muchas gracias por Preferirnos";</li>
+               <li>SiNo</li>
+                 <li>Escribir "     Clave Errada, No es posible  realizar el Retiro";  </li>
+                <li>FinSi</li>
+                <li>//fin de otro monto</li>
+           <li> FinSegun</li>
+           <li>//fin de retiro</li>
+        <li>FinSegun</li>
+      <li>SiNo</li>
+        <li>Escribir "Su clave es errada (Sistema Bloqueado)";</li>
+    <li>FinSi</li>
+    <li>SiNo</li>
+     <li> Escribir "Debes elegir que si para ver el resto del sistema";</li>
+   <li> FinSi</li>
+  <li>//FIN CÓDIGO CLIENTE</li>
+FinProceso
+        </ul>
+     </nav>
+     
+</nav>
+
+</nav>
+<section class="caja_links">
+  <nav class="links">
+    <button class="boton2"><a href="../portafolio.html" >Volver a Principal</a></button> 
+    
+  </nav></section>
+</article>
+
+	</section>
+
+	<footer>
+        <table>
+          <tr><th colspan="3"><h1>Redes sociales</h1>
+            <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4></td></td></tr>
+          <tr>
+            <td><h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="../imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4></td>
+            <td><h4 align="center"><a href="http://facebook.com">
+              <img src="../imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4></td>
+            <td><h4 align="center"><a href="http://instagram.com">
+              <img src="../imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4></td>
+          </tr>
+            </table>
+      </footer>
+</body>
+</html>

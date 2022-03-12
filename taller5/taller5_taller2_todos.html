@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <title>Cantera 1 Taller 5</title>
+</head>
+
+<body>
+
+  <section id="contenedor_taller5">
+    <nav id="titulo">Taller 5 PSeint</nav>
+
+
+    <article id="Container">
+
+      <section id="subtitulo">TALLER DE FUNCIONES</section>
+      <nav id="caja3_taller5">
+        <div id="subtitulo">Ejercicio del 1 al 10 de CONDICIONALES</div>
+        <br>
+        <p>1. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor
+          o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</p>
+
+        <pre class="taller5">
+
+          SubProceso respuesta <- edades ( edad ) 
+            Definir respuesta Como Entero; Si edad>= 18 Entonces
+            Escribir " Usted es Mayor de Edad ";
+            FinSi
+            FinSubProceso
+
+            Proceso AppEdades
+            Definir edad Como Entero;
+            Escribir "Escriba su edad";
+            Leer edad;
+            edad <- edades(edad); 
+          FinProceso 
+        </pre>
+
+
+        <br>
+        <p>2. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor
+          a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p>
+
+        <pre class="taller5"><br>
+            SubProceso respuesta <- peque ( edad )
+            //condicional de edad
+            Definir respuesta Como Entero;
+            Si edad <= 18 Entonces
+              Escribir " Usted aún es un niño";
+            FinSi
+            //fin de condicional de edad
+          FinSubProceso
+          
+          Proceso Appjoven
+              Definir edad Como Entero;
+              //pedido de datos
+              Escribir  "Escriba su edad";
+              Leer edad;
+              edad <- peque(edad);
+              //fin pedido de datos
+          FinProceso
+        </pre>
+
+
+
+        <br>
+        <p>3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la
+          persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre
+          completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la
+          edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente
+          mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede
+          entrar a la fiesta, por favor devuélvase a su casa.</p>
+
+        <pre class="taller5"><br>
+  SubProceso respuesta <- fiesta ( edad, nombre, apellido)
+      Definir respuesta Como Entero;
+      //condicional de entrada
+      Si edad >= 18 Entonces
+      Escribir " Sr(a) " ,nombre, " " , apellido," 
+      usted es mayor de edad, por lo tanto puede entrar a la fiesta. ";
+      SiNo
+      Escribir " Joven " ,nombre," " ,apellido," Usted es menor de edad,
+      por lo tanto. No puede entrar a la Fiesta, por favor devuélvase a su casa";
+      FinSi		
+      //fin de condicional de entrada
+      FinSubProceso
+        
+      Proceso Appfiesta
+      Definir nombre Como Caracter;
+      Definir apellido Como Caracter;
+      Definir edad Como Entero;
+      //código de peticón de datos
+      Escribir "Escriba su nombre";
+      Leer nombre;
+      Escribir "Escriba su Apellido";
+      Leer apellido;
+      Escribir  "Escriba su edad";
+      Leer edad;
+        	
+      edad <- fiesta (edad, nombre, apellido);
+      //fin de petición de datos
+      FinProceso
+      </pre>
+
+
+        <br>
+        <p>4. La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el
+          Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que
+          adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar
+          película, consultar películas disponibles y recibir película en la video tienda con la opción de
+          realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la
+          película</p>
+
+        <pre class="taller5">
+
+        SubProceso respuesta <- videot ( opcion, nombre, precio )
+        Definir respuesta Como Entero;
+        Definir pelicula Como Caracter;
+        Definir  opcion2 Como Entero;
+        Definir  comentario Como Caracter;
+        Definir devolucion Como Caracter;
+        
+        Limpiar Pantalla;
+        Segun opcion Hacer
+          1://codigo de Alquilar
+            Escribir "Escriba el nombre de la película que desea llevar";
+            leer pelicula;
+            Limpiar Pantalla;
+            Escribir "Sr(a) ", nombre ," Su película es: ","(", pelicula ,")"," 
+            el precio que debe pagar es de  ", precio, " mil Pesos, 
+            pase por caja para Cancelar ";
+            //fin Alquilar
+          2://Codigo de consulta y compra
+            Escribir "Nuestra lista de películas disponibles son";
+            Escribir "1. Los Imortales"; 
+            Escribir "2. El Pianista"; 
+            Escribir "3. Los Invensibles"; 
+            Escribir "4. Los Miserables"; 
+            Leer  opcion2; 
+            Limpiar Pantalla;
+            Segun opcion2 Hacer
+              1:
+                pelicula <- "Los imortales";
+                Escribir "Sr(a) ", nombre , " Su película es ", 
+                "(", pelicula , ")"," el precio que debe pagar es de  ", 
+                precio, " mil Pesos pase a la caja a pagar";
+              2:
+                pelicula <- "El Pianista";
+                Escribir "Sr(a) ", nombre , " Su película es ", 
+                "(", pelicula , ")"," el precio que debe pagar es de  
+                ", precio, " mil Pesos pase a la caja a pagar";
+              3: 
+                pelicula <- "Los Invensibles";
+                Escribir "Sr(a) ", nombre , " Su película es ", 
+                "(", pelicula , ")"," el precio que debe pagar es de  ",
+                 precio, " mil Pesos pase a la caja a pagar";
+              4: 
+                pelicula <- "Los Miserables";
+                Escribir "Sr(a) ", nombre , " Su película es ", 
+                "(", pelicula , ")"," el precio que debe pagar es de  ",
+                 precio, " mil Pesos a la caja a pagar";
+                
+            FinSegun
+            //fin consulta y compra
+            
+          3: //código de devolución
+            Escribir "Sr(a) ", nombre , " Usted procede a devolver una película";
+            Escribir "Escriba el nombre de la pelicula que desea devolver"; 
+            Leer pelicula;
+            Escribir "Por favor indique si la película devuelta tiene 
+            algún deterioro o daño a continuación" ;
+            Leer devolucion;
+            Limpiar Pantalla;
+            Escribir "Sr(a) ", nombre , " Usted a Devuelto la Película "
+            , pelicula; Escribir  "Defectos o Problemas: (", devolucion, ")",; 
+            Escribir "Muchas gracias por preferirnos";
+            //fin devolición
+        FinSegun
+        
+      FinSubProceso
+
+      Proceso AppVideoTienda
+        Definir nombre Como Caracter;
+        Definir  opcion Como Entero;
+        Definir precio Como Real;
+        precio <- 40000;
+        
+        
+        Escribir "Bienvenidos a VIDEO TIENDA PORVENIR";
+        Escribir "Gracias por Preferirnos";
+        Escribir "Indique su Nombre y Apellido por favor";
+        Leer nombre;
+        
+        Escribir "Elija una Opción";
+        Escribir "1. Alquilar  ";
+        Escribir "2. Consultar películas disponibles  ";
+        Escribir "3. Devolver Película";
+        
+        Leer opcion;
+        
+        opcion <- videot (opcion, nombre, precio);
+        
+      FinProceso
+      
+      </pre>
+        <br>
+        <p>5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación
+          para poder facturar los productos que vende a sus clientes y para ello, los productos tienen
+          unas características que deben indicársele al cliente para que pueda escoger el producto a
+          comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de
+          precios por producto y devoluciones en caso de que se presenten.</p>
+    <pre class="taller5">
+      SubProceso respuesta <- farma ( opcion, nombre )
+      Definir  opcion2 Como Entero;
+      Definir  opcion3 Como Entero;
+      Definir  opcion4 Como Entero;
+      Definir  opcion5 Como Entero;
+      Definir  comentario Como Caracter;
+      Definir medicamento Como Caracter;
+      Definir precio Como Real;
+      Definir devolucion Como Caracter;
+      Limpiar Pantalla;
+      Escribir "Bienvenido a la Venta de Medicamentos por favor elija su opción";
+      Segun opcion Hacer
+      1://codigo de compra de medicamento
+      Escribir "Lista de Pastillas";
+      Escribir "1. Pastillas para el dolor de Cabeza";	
+      Escribir "2. Pastillas para el dolor Muscular ";
+      Escribir "3. Pastillas para el dolor de Estomago";
+      Leer opcion2;
+      Limpiar Pantalla;
+      Segun opcion2 Hacer
+      1://compra dolor de cabeza
+      Escribir "1. Dolor de Cabeza";	
+      Segun opcion2 Hacer
+                      
+      1://opciones de pastillas para el dolor de cabeza y compra
+      Escribir " Estas son las pastillas para el Dolor de Cabeza ";
+      Escribir "1  Dol Forte";
+      Escribir "2. Tylenol";
+      Escribir "3. Ibuprofeno";
+      Escribir "4. Aspirina";
+      Leer opcion3;
+       Segun opcion3 Hacer
+        1:
+        medicamento<- "Dol Forte";
+        precio<-6000;
+                            
+        2:
+        medicamento<- "Tylenol";
+        precio<-5000;
+        3:
+        medicamento<- "Ibuprofeno";
+        precio<-4000;	
+        4:
+        medicamento<- "Aspirina";
+        precio<-3000;
+        FinSegun
+        Limpiar Pantalla;
+        Escribir "Sr(a) ", nombre,  " El medicamento comprado es: " ,medicamento,;
+        Escribir  " Su precio es de ", precio ," mil Pesos Pase a caja para cancelar";
+        
+    FinSegun
+    //fin pastilals para el dolor de cabeza y compra
+    2://codigo dolor muscular y compra
+    Limpiar Pantalla;
+    Escribir "2. Dolor Muscular";	
+    Escribir " Estas son las pastillas para el Dolor Muscular";
+    Escribir "1  Naproxeno";
+    Escribir "2. Algidol";
+    Escribir "3. Flanax";
+    Leer opcion3;
+    Segun opcion3 Hacer
+      1:
+        medicamento<- "Naproxeno";
+        precio<-3000;
+        
+      2:
+        medicamento<- "Algidol";
+        precio<-4000;
+      3:
+        medicamento<- "Flanax";
+        precio<-5000;
+        
+    FinSegun
+    Limpiar Pantalla;
+    Escribir "Sr(a) ", nombre,  " El medicamento comprado es: " ,medicamento,;
+    Escribir  " Su precio es de ", precio ," mil Pesos Pase a caja para cancelar";
+    //fin codigo dolor muscular y compra
+    3://codigo dolor de estomago y compra
+    Escribir "3. Dolor de Estomago";
+    Escribir " Estas son las pastillas para el Dolor de Estomago";
+    Escribir "1  Butilhioscina";
+    Escribir "2. Dolbutin";
+    Escribir "3. Panclasa";
+    Leer opcion3;
+    Segun opcion3 Hacer
+        1:
+        medicamento<- "Butilhioscina";
+        precio<-8000;
+      2:
+        medicamento<- "Dolbutin";
+        precio<-7000;
+      3:
+        medicamento<- "Panclasa";
+        precio<-6000;
+        
+    FinSegun
+    Limpiar Pantalla;
+    Escribir "Sr(a) ", nombre,  " El medicamento comprado es: " ,medicamento,;
+    Escribir  " Su precio es de ", precio ," mil Pesos Pase a caja para cancelar";
+    
+    FinSegun
+    //fin dolor de estomago y conmpra
+    2://comienzo de consulta de medicamentos
+    Escribir "Consulta de Medicamentos Disponibles";
+    Escribir "Nuestra lista de películas disponibles son";
+    Escribir "1. Dolores"; 
+    Escribir "2. Jarabes"; 
+    Leer  opcion2; 
+    Limpiar Pantalla;
+    Segun opcion2 Hacer
+    1://consulta de dolores
+    Escribir "Pastillas para los Dolores de Cabeza";
+    Escribir "1  Dol Forte";
+    Escribir "2. Tylenol";
+    Escribir "3. Ibuprofeno";
+    Escribir "4. Aspirina";
+    
+    Escribir "Pastillas para los Dolores Musculares";
+    Escribir "1  Naproxeno";
+    Escribir "2. Algidol";
+    Escribir "3. Flanax";
+    
+    Escribir " Pastillas para el Dolor de Estomago";
+    Escribir "1  Butilhioscina";
+    Escribir "2. Dolbutin";
+    Escribir "3. Panclasa";
+    
+    2:	//opcion de Jarabes
+    Escribir "Jarabes Para la Tos";
+    
+    Escribir "1  Bromhexina";
+    Escribir "2. Bisolvon";
+    Escribir "3. Bisolmed";
+    Escribir "4. Bronquisol";
+    Escribir "5. Pulmosan";
+    Escribir "Ambroxol";
+    Escribir "Mucosolvan";
+    Escribir "Mucosan";
+    Escribir "Broxol";  
+    FinSegun
+    3://codigo devolver
+    Escribir "Sr(a) ", nombre , " Usted procede a devolver un medicamento";
+    Escribir "Escriba el nombre del Medicamento que desea devolver"; 
+    Leer medicamento;
+    Escribir "Por favor indique si el medicamento devuelto tiene algún deterioro,
+    daño, o vencimiento a continuación" ;
+    Leer devolucion;
+    Limpiar Pantalla;
+    Escribir "Sr(a) ", nombre , " Usted a Devuelto el Medicamento ", medicamento;
+    Escribir "la razón de devolución es: ", "(", devolucion, ")",; 
+    Escribir "Muchas gracias por preferirnos";
+    
+    //fin devolución
+    FinSegun
+    FinSubProceso                    
+      </pre>
+        <br>
+        <p>6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las
+          respectivas revisiones y requiere una aplicación que le permita registrar los servicios
+          generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller
+          y las observaciones por parte del cliente. También debe existir registro de salida del taller
+          con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera
+          inventariar cambios repuestos en la motocicleta al entregarl</p>
+
+<pre class="taller5"><br>
+  //SubProceso 1 opcin menú
+  SubProceso respuesta <- ingresar ( opcion, status )
+    
+    Definir ingreso Como Caracter;
+    Definir servicio Como Caracter;
+    Definir precio Como Real;
+    Definir repuestos Como Caracter;
+    status <- 1;
+    Segun opcion Hacer
+      1://ingreso de servicios
+        
+        servicio <- servingre (opcion, status);
+        //fin de ingreso de servicio
+      2:	//inicio de petición de finalización de servicio
+        status <- 1;
+        servicio <- finservicio(opcion, status);
+        //fin de finalización de servicio
+      3: //inico de zona cliente y comentarios
+        status <- 1;
+        servicio<- zonacliente(opcion, status);
+        //fin de comentarios de cliente
+    FinSegun
+  FinSubProceso
+  //fin subproceso 1 de menú
+  //SubProceso 2 Ingreso de servicio
+  //ingreso de servicios
+  SubProceso respservicio <- servingre ( opcion, status)
+    Definir fechaEnt Como Caracter;
+    Definir placa Como Caracter;
+    Definir nombre Como Caracter;
+    Definir marca Como Caracter;
+    Definir tipo Como Caracter;
+    Definir tipofalla Como Caracter;
+    Definir opcion2 Como Entero;
+    Definir reparacion Como Caracter;
+    Definir repuestos Como Caracter;
+    Definir fechaSal Como Caracter;
+    Escribir "Ingresa la Fecha de Entrada de la Moto";
+    Leer fechaEnt;
+    Escribir "Ingresa el nombre del Cliente o Dueño";
+    Leer nombre;
+    Escribir "Ingresa la Placa de la Moto";
+    Leer placa;
+    Escribir "Ingresa la Marca de la Moto";
+    Leer marca;
+    Escribir "Ingresa la tipo de la Moto";
+    Leer tipo;
+    Escribir "Ingresa el tipo de falla que tiene la moto";
+    Leer tipofalla;
+    si status = 1 Entonces
+      Escribir "¿El servicio fue Concluido?";
+      Escribir "1. SI";
+      Escribir "2. NO";
+      leer opcion2;
+      Segun opcion2 Hacer
+        1:
+          Escribir "¿Cual fue el problema mecánico de la Moto?";
+          Leer reparacion;
+          Escribir "Indique los repuestos usados";
+          Leer repuestos;
+          Escribir "Indique la fecha de Salida";
+          Leer fechaSal;
+          status <- 2;
+          si status = 1 Entonces
+            Escribir "Estado de la Moto aún en reparación";
+          SiNo
+            Escribir "El Estado de la Moto es entregada";
+          FinSi
+          //mensaje de status de servicio
+        2:
+          Escribir "El Estatus de la Moto sigue estando en reparación";
+          
+      FinSegun
+    SiNo
+      Escribir "Este servicio mecánico ya fue concluido";
+      
+    FinSi
+    //fin de ingreso de servicio
+  FinSubProceso
+  //Fin SubPrceso 2 Ingreso de servicio
+  //Subproceso 3  de final de servicio
+  SubProceso finalservi <- finservicio (opcion, status)
+    Definir placa Como Caracter;
+    Definir reparacion Como Caracter;
+    Definir repuestos Como Caracter;
+    Definir fechaSal Como Caracter;
+    //inicio de petición de finalización de servicio
+    Escribir "Ingresa la Placa de la Moto";
+    Leer placa;
+    Escribir "¿Cual fue el problema mecánico de la Moto?";
+    Leer reparacion;
+    Escribir "Indique los repuestos usados";
+    Leer repuestos;
+    Escribir "Indique la fecha de Salida";
+    Leer fechaSal;
+    status <- 2;
+    si status = 1 Entonces
+      Escribir "Estado de la Moto aún en reparación";
+    SiNo
+      Escribir "El Estado de la Moto lista para ser entregada";
+    FinSi
+    //fin de finalización de servicio
+  FinSubProceso
+  //fin de subproceso 3 final de servcio
+  
+  //Subproceso 4 zona cliente y comentarios
+  SubProceso reszcliente <- zonacliente(opcion, status)
+    //inico de zona cliente y comentarios
+    Definir opcion3 Como Entero;
+    Definir nombre Como Caracter;
+    Definir placa Como Caracter;
+    Definir queja Como Caracter;
+    Definir comentario Como Caracter;
+    Escribir "Bienvenido a la Zona cliente";
+    Escribir "Zona de servicio de satifacción al cliente";
+    Escribir "Elija su Opción";
+    Escribir "1. Queja de Servcio";
+    Escribir "2. Comentarios del Servicio";
+    leer opcion3;
+    si opcion3 = 1 Entonces
+      Escribir "Estimado cliente indique aquí su queja";
+      Escribir "Indique su nombre";
+      Leer nombre;
+      Escribir "Escriba la placa de su moto";
+      Leer placa;
+      Escribir "Por favor escribanos su queja";
+      Leer queja;
+      Limpiar Pantalla;
+      Escribir  "Muchas Gracias Sr(a) " , nombre , " dueño de la moto placa ", placa;
+      Escribir "Su queja es: ";
+      Escribir queja;
+      Escribir "Muchas gracias por dejarnos sus comerntarios, lo tomaremos en 
+      cuenta y corregiremos nuestros Servicios";
+    SiNo
+      Escribir "Estimado cliente indique aquí su comentario";
+      Escribir "Indique su nombre";
+      Leer nombre;
+      Escribir "Escriba la placa de su moto";
+      Leer placa;
+      Escribir "Por favor escribanos su comentario";
+      Leer comentario;
+      Limpiar Pantalla;
+      Escribir  "Muchas Gracias Sr(a) " ,nombre , " dueño de la moto placa ", placa;
+      Escribir "Su comentario es: ";
+      Escribir comentario;
+      Escribir "Muchas gracias por dejarnos sus comentarios, Estamos para servirle";
+    FinSi
+    //fin de comentarios de cliente
+  FinSubProceso
+  // Fin de Subproceso 4 zona cliente y comentarios
+  //proceso de incio
+  Proceso Appmaqunista
+      Definir opcion Como Entero;
+    Definir status Como Entero;
+    Definir reparacion Como Caracter;
+    Definir repuestos Como Caracter;
+    Definir fechaSal Como Caracter;
+    status <- 1;
+    //Muestra de opciones
+    Escribir "Elija una Opción";
+      Escribir "1. Ingresar Servicio Mecánico";
+    Escribir "2. Finalzar Servicios ";
+    Escribir "3. Zona Cliente para comentar el Servicio";
+    Leer opcion;
+    opcion <- ingresar (opcion, status);
+    //fin de muestra de opciones
+    //fin de opciones de inicio
+  FinProceso
+      </pre>
+        <br>
+        <p>7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC
+          (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros
+          Para cada persona encuestada adicional a los datos suministrados, debe mostrar el
+          resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal,
+          sobrepeso y obeso).</p>
+
+  <pre class="taller5"><br>
+    SubProceso respuesta <- pcorporal ( nombres, edad, estatura, peso )
+    //comienzo de formúla
+    Definir respuesta Como Entero;
+    Definir estaturam2 Como Real;
+    Definir imc Como Real;
+    estaturam2<- estatura * 2;
+    imc<- peso / estaturam2; 
+    Limpiar Pantalla;
+    Escribir "Resultados del Paciente " , nombres;
+    
+    Si imc <= 18.5  Entonces
+      Escribir "Estimado Paciente ", nombres , " su IMC es de ", imc;
+      Escribir "Su estado coorporal peso esta en la categoría de Bajo";
+    SiNo
+      Si imc >= 18.5  y imc <= 24.5 Entonces
+        Escribir "Estimado Paciente ", nombres , " su IMC es de ", imc;
+        Escribir "Su estado coorporal de peso esta en la categoría de  Normal";
+      SiNo
+        Si imc >= 24.5 Entonces
+          Escribir "Estimado Paciente ", nombres , " su IMC es de ", imc;
+          Escribir "Su estado coorporal de peso esta en la categoría de Obeso";
+          FinSi
+      FinSi
+    FinSi
+    //fin de formúla
+  FinSubProceso
+  
+  Proceso AppPeso
+    Definir nombres Como Caracter;
+    Definir edad Como Entero;
+    Definir estatura Como Real;
+    Definir peso Como Real;
+    
+    //códogo de pedido de datos
+    Escribir "Bienvenido a la App de la Secretaria Municipal "; 
+    Escribir "Zona de datos para el IMC";
+    Escribir "Indique nombre completo del paciente";
+    Leer nombres;
+    Escribir "Indique edad del paciente " , nombres;
+    Leer edad;
+    Escribir "Indique estatura del paciente " , nombres;
+    Leer estatura;
+    Escribir "Indique peso del paciente " , nombres;
+    Leer peso;
+    
+    peso <- pcorporal ( nombres, edad, estatura, peso );
+    //fin pedido de datos
+    
+  FinProceso
+      </pre>
+
+        <br>
+        <p>8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le
+          permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta
+          tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se
+          requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas
+          que se registren diariamente.</p>
+
+ <pre class="taller5">
+
+
+  SubProceso beginpastel <- begin (nombre, escojer)
+    	
+	Definir  opcion Como Entero;
+	Definir  opcion2 Como Entero;
+	Definir  opcion3 Como Entero;
+	Definir  opcion4 Como Entero;
+	Definir  opcion5 Como Entero;
+	Definir pedido Como Caracter;
+	Definir forma Como Caracter;
+	Definir sabor Como Caracter;
+	Definir relleno Como Caracter;
+	Definir  comentario Como Caracter;
+	Definir Torta Como Caracter;
+	Definir direccion Como Caracter;
+	Definir precio Como Real;
+	Definir clave Como Entero;
+	Definir pass Como Entero;
+	Definir cant Como Entero;
+	clave <- 12345;
+	Limpiar Pantalla;
+	//Comienza la selección de pedidos
+	Segun escojer Hacer
+	1:
+	Escribir "Sr(a) ", nombre , " Indiquenos su pedido ";
+	Escribir "Elija una Opción";
+	Escribir "1. Tortas ";
+	Escribir "2. Muffins ";
+	Escribir "3. Postres Frios";	
+	Leer opcion;
+	Si opcion = 1 Entonces
+	pedido <- "Torta";
+	SiNo
+	Si opcion = 2 Entonces
+	pedido <- "Muffins";
+	SiNo
+	pedido <- "Postres Frios";
+	FinSi
+	FinSi
+			
+	Limpiar Pantalla;
+	//comeinza el pedido de forma de tortas
+	Segun opcion Hacer
+	1:
+	Escribir "Area de  Tortas Sr(a) ", nombre, " por favor elija 
+  la forma que desea";
+	Escribir "1. Redonda";	
+  Escribir "2. Cuadrada ";
+  Escribir "3. Rectangular";
+  Leer opcion2;
+  Limpiar Pantalla;
+  Si opcion2 = 1 Entonces
+    forma <- "Redonda";
+  SiNo
+    Si opcion2 = 2 Entonces
+      forma <- "Cuadrada";
+    Sino	
+      Si opcion2 = 3 Entonces	
+        forma <- "Rectangular";
+      FinSi	
+    FinSi
+  FinSi			
+  Escribir "Sr(a) ", nombre , "Su pedido hasta ahora ha sido " , 
+  pedido, " ",  forma;
+					
+  //fin de pedido de forma tortas
+  //comienza el pedido de sabores de tortas
+  Escribir "Indique ahora el Sabor de su preferencia";
+  Escribir "1. Fresa";	
+  Escribir "2. Chocolate ";
+  Escribir "3. Vainilla";
+  Escribir "4  Limón ";
+  Leer opcion3;
+  Si opcion3 = 1 Entonces
+    sabor<- "Fresa";
+  SiNo
+    Si opcion3 = 2 Entonces
+      sabor <- "Chocolate";
+    SiNo
+      Si opcion3 = 3 Entonces
+        sabor <- "Vainillas";
+      SiNo
+        sabor <- "Limón";
+      FinSi
+    FinSi
+  FinSi
+  Limpiar Pantalla;
+  Escribir "Sr(a) ", nombre , " Su pedido hasta ahora ha sido " , 
+  pedido, " " ,forma, " de ", sabor;				
+	//finalizacion del area de Sabores de tortas
+  //comienza opcioines de rellenos de tortas
+	Escribir "Indique ahora si desea la Torta con relleno";
+	Escribir "1. Si";	
+	Escribir "2. no";
+	Leer opcion4;
+	Si opcion4 = 1 Entonces
+	relleno <- "con relleno";
+	precio <- 12000;
+	SiNo
+	relleno <- "Sin relleno";
+	precio <- 8000;
+  FinSi
+  Limpiar Pantalla;
+  Escribir "Su pedido ha sido registrado";
+  Escribir "Sr(a) ", nombre , " Su pedido es: " , pedido, " " ,forma, 
+  " de ", sabor ," ", relleno;
+  //fin de rellenos tortas
+  //peticiones de  información paara envio de tortas
+  Escribir  "Por Favor indiquenos la dirección donde quiere que envien 
+  su pedido ";
+  Leer direccion;
+  Limpiar Pantalla;
+  Escribir "Sr(a) ", nombre , " Su pedido es: " , pedido, " " ,forma, 
+  " de ", sabor ," ", relleno;
+  Escribir "Y será enviado a la Dirección ", direccion;
+  Escribir " Precio a Pagar es: " , precio, " mil pesos ", ;
+  Escribir "Muchas Gracias por su compra";
+  //final de pedidos de tortas			
+					
+	2:
+  //co0mienzop codigo de los Muffins
+  Escribir "Bienvenido a la Venta de  Muffins Sr(a) ", nombre, " por 
+  favor elija la sabor que desea";
+  Escribir "1. Chocolate ";	
+  Escribir "2. Vainilla ";
+  Leer opcion2;
+  Limpiar Pantalla;
+  Si opcion2 = 1 Entonces
+    sabor<- "Chocolate";
+  SiNo
+    Si opcion2 = 2 Entonces
+      sabor <- "Vainilla";
+    FinSi
+  FinSi
+  Escribir "¿Cual es la cantidad de Muffins de ", sabor," desea llevar?";
+  Leer cant;
+  Limpiar Pantalla;
+  Escribir "Indique ahora si desea la que lleven chispas sus Muffins";
+  Escribir "1. Si";	
+  Escribir "2. no";
+  Leer opcion4;
+  Definir chispas Como Caracter;;
+  Definir preciochispas Como Entero;
+  Definir preprecio Como Entero;
+  Si opcion4 = 1 Entonces
+    preciochispas <- 500 * cant;
+    preprecio <- 2000 * cant;
+    precio <- preprecio + preciochispas;
+    chispas <- "Con chispas";
+  SiNo	
+    chispas <- "sin chispas";
+    precio <- 2000 * cant;
+  FinSi
+  Limpiar Pantalla;
+  Escribir "Su pedido ha sido registrado";
+  Escribir "Sr(a) ", nombre , " Su pedido es: " , cant , " " , pedido,
+   " " , sabor , " " ,chispas;
+  Escribir  "Por Favor indiquenos la dirección donde quiere que envien 
+  su pedido ";
+  Leer direccion;
+  Limpiar Pantalla;
+  Escribir "Sr(a) ", nombre , " Su pedido es cantidad de; " , cant, " " , 
+  pedido, " " ,sabor, " ", chispas;
+  Escribir "Y será enviado a la Dirección ", direccion;
+  Escribir " Precio a Pagar es: " , precio, " mil pesos ", ;
+  Escribir "Muchas Gracias por su compra";
+  //Fin de pedido de Muffins			
+  3:	
+  //Inicio de pedido de Postres frios
+  Escribir "Bienvenido a la Venta de  postes Frios Sr(a) ", nombre, "
+  por favor elija la sabor que desea";
+  Escribir "1. Chocolate ";	
+  Escribir "2. Fresa ";
+  Escribir "3. Tres Leches";
+  Leer opcion;
+  pedido <- "Postres Frios";
+  Definir postre Como Caracter;
+  Si opcion = 1 Entonces
+    postre <- "Chocolate";
+    precio <- 4000;
+  SiNo
+    Si opcion = 2 Entonces
+      postre <- "Fresa";
+      precio <- 5000;
+    SiNo
+      Si opcion = 3 Entonces
+        postre <- "Tres leches";
+        precio <- 7000;
+      FinSi
+    FinSi
+  FinSi
+  Limpiar Pantalla;
+  Escribir "Su pedido ha sido registrado";
+  Escribir "Sr(a) ", nombre , " Su pedido es: 1 " , pedido, 
+  " de " , postre;
+  Escribir  "Por Favor indiquenos la dirección donde quiere 
+  que envien su pedido ";
+  Leer direccion;
+  Limpiar Pantalla;
+  Escribir "Sr(a) ", nombre , " Su pedido es 1 " , pedido, 
+  " de " ,postre;
+  Escribir "Y será enviado a la Dirección ", direccion;
+  Escribir " Precio a Pagar es: " , precio, " mil pesos ", ;
+  Escribir "Muchas Gracias por su compra";
+  FinSegun								
+        
+  //fin de postres
+  2:
+  //comienzo codigo de  Consultas de productos
+  Escribir "Saludos Sr(a) ", nombre ,  " le damos una cordial
+   Bienvenida elija su opción " ;
+  Escribir "1. Tortas ";
+  Escribir "2. Muffins ";
+  Escribir "3. Postres Frios";
+  Leer opcion;
+  egun opcion Hacer
+  1:
+  
+  //comienzo de codigo para consulta de Tortas
+  Escribir " Sr(a) ", nombre ,  "En nuestros opciones de 
+  Tortas tenemos";
+  Escribir "Tortas de Chocolate";
+  Escribir "Tortas de Vainilla";
+  Escribir "Tortas de mantecado";
+  Escribir "Sus Formas pueden ser redondas, Cuadradas o
+  rectangulares";
+  Escribir "y puede elegir entre rellenas o no ";
+  Escribir "Si desea realizar un pedido vaya a la opción realizar 
+  pedidos y siga las instrucciones";
+  Escribir "Muchas gracias por preferirnos";
+  //fin de consulta de Tortas
+  
+  2:
+  //comienzo de consultas de Muffins
+  Escribir " Sr(a) ", nombre ,  "En nuestros opciones de 
+  Tortas Muffins";
+  Escribir "Muffins de Chocolate";
+  Escribir "Muffins de Vainilla";
+  Escribir "Los mismos vienen relleno de crema del sabor pedido ";
+  Escribir "así mismo tiene la opción de pedirlos con chispas o 
+  sin chispas";
+  Escribir "Si desea realizar un pedido vaya a la opción realizar pedidos
+   y siga las instrucciones";
+  Escribir "Muchas gracias por preferirnos";
+  
+  //fin de consulta de muffins
+  3:	
+  //comienzo de consulta de  Postres frios
+  Escribir " Sr(a) ", nombre ,  "En nuestros opciones de Postres Frios";
+  Escribir "Postres Frios de Chocolate";
+  Escribir "Postres Frios de Fresa";
+  Escribir "Postres Frios de tres Leches";
+  Escribir "Si desea realizar un pedido vaya a la opción realizar pedidos
+   y siga las instrucciones";
+  Escribir "Muchas gracias por preferirnos";
+  
+  //fin de consultas tortas frias
+  FinSegun
+  
+  3:	
+  //comienzo de consulta de ventas diarias
+  Limpiar Pantalla;
+  Escribir "Bienvenido Sr(a) " , nombre;
+  Escribir "Este area es para empleados, elija una opcion"; 
+  Escribir "1. Empleado";
+  Escribir "2. Cliente ";
+  Leer opcion5;
+  Limpiar Pantalla;
+  Si opcion5 = 1 Entonces
+  Escribir "Coloque la Clave de Acceso";
+  Leer pass;
+  Si pass = clave  Entonces
+  Escribir "Bienvenido Sr(a) " , nombre , " Acceso Permitido al area 
+  de venta Diaria"; 
+  SiNo
+  Escribir "Sr(a) " , nombre , " Acceso denegado Clave de Acceso 
+  Errada "; 
+  FinSi
+  SiNo
+  Escribir "Estimado Cliente este módulo es solo para Empleados";
+  Escribir "Lamentamos los incoveniente";
+  Escribir "Si desea realizar un pedido vaya a la opción realizar 
+  pedidos y siga las instrucciones";
+  Escribir "Muchas gracias por preferirnos";
+  
+  FinSi
+  //fin de ventas diarias
+        
+    FinSegun
+  FinSubProceso
+  
+  
+  Proceso AppPastelero
+    Definir nombre Como Caracter;
+    Definir  escojer Como Entero;
+    
+    
+    
+    Escribir "Bienvenidos a Su *Pasteleria Don Carlos*";
+    Escribir "Indique su Nombre y Apellido por favor";
+    Leer nombre;
+    
+    //COMIENZA EL AREA DE OPCIONES PRINCIPALES 
+    Escribir "Saludos Sr(a) ", nombre ,  " le damos una cordial
+    Bienvenida elija su opción " ;
+    Escribir "1. Realizar un pedido";
+    Escribir "2. Consultar la Lista de Productos Disponibles ";
+    Escribir "3. Venta Diaria";	
+    Leer escojer;
+    escojer <- begin (nombre, escojer);
+    
+  FinProceso
+
+       
+  </pre>
+
+        <br>
+        <p>9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el
+          área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el
+          ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el
+          estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No
+          olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo
+          resultado.</p>
+
+  <pre class="taller5">
+
+    
+    SubProceso respuesta <- calculo ( opcion)
+	//comienzo de claculo de área del rectángulo
+	Definir base Como Real;
+	Definir base2 Como Real;
+	Definir altura Como Real;
+	Definir area Como Real;
+	Segun opcion Hacer
+		1:
+			Escribir "Calculo de Área de un Rectángulo";
+			Escribir "Ingrese los datos que se le piden a continuación";
+			Escribir "Ingrese la base o largo";
+			Leer base;
+			Escribir "Ingrese la Altura o Anchura";
+			Leer altura;
+			Limpiar Pantalla;
+			Escribir "Fórmua Mátematica usada";
+			Escribir "a -> área";
+			Escribir "b -> base ";
+			Escribir "h -> altura";
+			Escribir " La fórmula ulitizada es: a = b x h ";
+			area <- base * altura;
+			Escribir "El Área del Rectángulo es: ", area, " cm2";
+			//fin de cálculo de area del rectángulo
+			
+		2://calculo de área del trapecio
+			Escribir "Calculo de Área de un Trapecio";
+			Escribir "Ingrese los datos que se le piden a continuación";
+			Escribir "Ingrese la 1era base o 1er largo";
+			Leer base;
+			Escribir "Ingrese la 2da base o 2do largo";
+			Leer base2;
+			Escribir "Ingrese la Altura o Anchura";
+			Leer altura;
+			Limpiar Pantalla;
+			Escribir "Fórmua Mátematica usada";
+			Escribir "a -> área";
+			Escribir "b -> 1era base ";
+			Escribir "b2 -> 2da base ";
+			Escribir "h -> altura";
+			Escribir "Fórmula utilizada es:  a = (b + b2) x h / 2";
+			area <- (base + base2) * altura / 2;
+			Escribir "El Área del Trapecio es: ", area , " cm2";
+	  FinSegun
+	  //fin cálculo de área del trapecio
+    FinSubProceso
+
+
+    Proceso AppCAlculoArea
+	
+    	Definir opcion Como Entero;
+	  //bienvenida para calculo de areas
+	  Escribir "Bienvenidos al Cálculo de Areas";
+	  Escribir "Que desea cálculaar";
+	  Escribir "1. Area de un Rectángulo";
+	  Escribir "2. Area de un Trapecio";
+	  Leer opcion;
+	
+	   opcion <- calculo (opcion);
+	
+  FinProceso
+
+
+  </pre>
+
+      
+ 
+
+        <br>
+        <p>10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una
+          aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta
+          tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar
+          ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores
+          negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p>
+
+<pre class="taller5"><br>
+
+  //subproceso 1 opcion de cuenta
+  SubProceso crearcuenta <- cuentaclient( clave, nombre, cc, direc, tipoc, numc, cantidad )
+    Definir pass Como Entero;
+    Definir opcion2 Como Entero;
+    Definir cambioclave Como Entero;
+    Definir opcion3 Como Entero;
+    Definir retiro Como Real;
+    pass <- 1234;
+    Si clave = pass Entonces
+      Limpiar Pantalla;
+      Escribir "         Bienvenidos Sr(A) " , nombre;
+      Escribir "           Elija la opción que desea";
+      Escribir "";
+      Escribir "    1.Consulta de cuenta";
+      Escribir "    2 Cambiar Clave";
+      Escribir "    3 Retiro";
+      Leer opcion2;
+      Segun opcion2 Hacer
+        
+        1:
+          Limpiar Pantalla;
+          //Código de consulta
+          Escribir "              Consulta de la cuenta número ", numc;
+          Escribir "";
+          Escribir "      Nombre del Titular:  ", nombre;
+          Escribir "      Monto en la cuenta: " , cantidad;
+          Escribir "";
+          Escribir "               Muchas gracias por Preferirnos";
+          //fin de consulta
+        2:
+          //Código cambio de clave
+          Limpiar Pantalla;
+          Escribir "              Cambio de clave de cuenta número ", numc;
+          Escribir "";
+          Escribir "      Ingrese la clave anterior:";
+          Leer clave;
+          Si clave = pass Entonces
+            Escribir "Escriba la clave nueva";
+            leer cambioclave;
+            pass <- cambioclave;
+            Limpiar Pantalla;
+            
+            Escribir "                 Su Clave ha sido cambia exitosamente";
+            Escribir "                 Clave Nueva es " ,pass;
+            Escribir "";
+            Escribir "               Muchas gracias por Preferirnos";
+          SiNo
+            Escribir "Clave Errada, No es posible cambiar su clave";
+          FinSi
+          
+          //fin de cambio de clave
+        3:
+          //Código de retiro
+          Limpiar Pantalla;
+          Escribir "                             RETIROS";
+          Escribir "";
+          Escribir " 						Elija la cantidad";
+          Escribir "";
+          Escribir "         1.  20.000", "                               5. 400.000  ";
+          Escribir "         2.  50.000", "                               6. 500.000  ";
+          Escribir "         3.  100.000", "                              7. 600.000 ";
+          Escribir "         4.  200.000", "                              8. Otro Monto ";
+          leer opcion3;
+          Segun opcion3 Hacer
+            1:
+              //retiro 200000
+              Limpiar Pantalla;
+              Escribir "                             RETIROS";
+              Escribir "Introduzca la clave";
+              Leer clave;
+              Limpiar Pantalla;
+              Si clave = pass Entonces
+                retiro <- cantidad - 20000;
+                cantidad <- retiro;
+                Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; 
+                Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";
+                Escribir "";
+                Escribir "               Muchas gracias por Preferirnos";
+              SiNo
+                Escribir "     Clave Errada, No es posible 	realizar el Retiro";
+              FinSi
+              //fin retiro de 200000
+            2:
+              //retiro 500000
+              Limpiar Pantalla;
+              Escribir "                             RETIROS";
+              Escribir "Introduzca la clave";
+              Leer clave;
+              Limpiar Pantalla;
+              Si clave = pass Entonces
+                retiro <- cantidad - 50000;
+                cantidad <- retiro;
+                Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; 
+                Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";
+                Escribir "";
+                Escribir "               Muchas gracias por Preferirnos";
+              SiNo
+                Escribir "     Clave Errada, No es posible 	realizar el Retiro";
+              FinSi
+              //fin retiro de 500000
+            3:
+              //retiro 1000000
+              Limpiar Pantalla;
+              Escribir "                             RETIROS";
+              Escribir "Introduzca la clave";
+              Leer clave;
+              Limpiar Pantalla;
+              Si clave = pass Entonces
+                retiro <- cantidad - 100000;
+                cantidad <- retiro;
+                Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; 
+                Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";
+                Escribir "";
+                Escribir "               Muchas gracias por Preferirnos";
+              SiNo
+                Escribir "     Clave Errada, No es posible 	realizar el Retiro";
+              FinSi
+              //fin retiro de 1000000
+            4:
+              //retiro 2000000
+              Limpiar Pantalla;
+              Escribir "                             RETIROS";
+              Escribir "Introduzca la clave";
+              Leer clave;
+              Limpiar Pantalla;
+              Si clave = pass Entonces
+                retiro <- cantidad - 200000;
+                cantidad <- retiro;
+                Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; 
+                Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";
+                Escribir "";
+                Escribir "               Muchas gracias por Preferirnos";
+              SiNo
+                Escribir "     Clave Errada, No es posible 	realizar el Retiro";
+              FinSi
+              //fin retiro de 2000000
+            5:
+              //retiro 4000000
+              Limpiar Pantalla;
+              Escribir "                             RETIROS";
+              Escribir "Introduzca la clave";
+              Leer clave;
+              Limpiar Pantalla;
+              Si clave = pass Entonces
+                retiro <- cantidad - 400000;
+                cantidad <- retiro;
+                Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; 
+                Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";
+                Escribir "";
+                Escribir "               Muchas gracias por Preferirnos";
+              SiNo
+                Escribir "     Clave Errada, No es posible 	realizar el Retiro";
+              FinSi
+              //fin retiro de 4000000
+            6:
+              //retiro 5000000
+              Limpiar Pantalla;
+              Escribir "                             RETIROS";
+              Escribir "Introduzca la clave";
+              Leer clave;
+              Limpiar Pantalla;
+              Si clave = pass Entonces
+                retiro <- cantidad - 500000;
+                cantidad <- retiro;
+                Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; 
+                Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";
+                Escribir "";
+                Escribir "               Muchas gracias por Preferirnos";
+              SiNo
+                Escribir "     Clave Errada, No es posible 	realizar el Retiro";
+              FinSi
+              //fin retiro de 5000000
+            7:
+              //retiro 6000000
+              Limpiar Pantalla;
+              Escribir "                             RETIROS";
+              Escribir "Introduzca la clave";
+              Leer clave;
+              Limpiar Pantalla;
+              Si clave = pass Entonces
+                retiro <- cantidad - 600000;
+                cantidad <- retiro;
+                Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; 
+                Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";
+                Escribir "";
+                Escribir "               Muchas gracias por Preferirnos";
+              SiNo
+                Escribir "     Clave Errada, No es posible 	realizar el Retiro";
+              FinSi
+              //fin retiro de 6000000
+            8:
+              //retiro otro monto
+              Limpiar Pantalla;
+              Escribir "                             RETIROS";
+              Escribir "Introduzca la clave";
+              Leer clave;
+              Limpiar Pantalla;
+              Si clave = pass Entonces
+                Escribir "Ingrese la cantidad a retirar";
+                Leer montoret;
+                retiro <- cantidad - montoret;
+                cantidad <- retiro;
+                Limpiar Pantalla;
+                Escribir "     Sr(a) ", nombre, " Su retiro es satisfactiorio"; 
+                Escribir "     Su nuevo saldo es:  " ,  cantidad , " mil Pesos";
+                Escribir "";
+                Escribir "               Muchas gracias por Preferirnos";
+              SiNo
+                Escribir "     Clave Errada, No es posible 	realizar el Retiro";	
+                
+              FinSi
+              //fin de otro monto
+          FinSegun
+          
+          //fin de retiro
+      FinSegun
+    SiNo
+      Escribir "Su clave es errada (Sistema Bloqueado)";
+    FinSi
+  FinSubProceso
+  //Fin SubProceso 1 Opcion de Cuenta
+  
+  
+  
+  Proceso Appbancofiel
+    Definir nombre Como Caracter;
+    Definir cc Como Entero;;
+    Definir  direc Como Caracter;
+    Definir tipoc Como Caracter;
+    Definir numc Como Caracter;
+    Definir cantidad Como Real;
+    Definir ingreso Como Real;
+    
+    Definir opcion Como Entero;
+    
+    
+    Definir clave Como Entero;
+    
+    Definir continuar Como Entero;
+    
+    Definir montoret Como Real;
+    
+    
+    //código de Empleado
+    
+    Escribir "Bienvenidos a Su Banco Fiel";
+    
+    Escribir "Crear una Cuenta";
+    Escribir "Llene por favor los siguientes datos";
+    Escribir "Ingrese el Nombre Completo del Titular";
+    Leer nombre;
+    Escribir "Ingrese Cédula del Titular";
+    Leer cc;
+    Escribir "Ingrese la Dirección del Titular";
+    Leer direc;
+    Escribir "Ingrese Tipo de Cuenta";
+    Leer tipoc;
+    Escribir "Ingrese Número de Cuenta";
+    Leer numc;
+    Escribir "Ingrese cantidad";
+    Leer cantidad;
+    Limpiar Pantalla;
+    Escribir "   La cuenta ha sido creada satisfactoriamente";
+    Escribir "   Los datos agregados son los siguientes";
+    Escribir "";
+    Escribir "  Nombre del Titular: ", nombre;
+    Escribir "  Cédula del Titular: ", cc;
+    Escribir "  Dirección: ", direc;
+    Escribir "  Tipo de Cuenta: ", tipoc;
+    Escribir "  Cuenta número: ", numc;
+    Escribir "  Cantidad: ", cantidad;
+    Escribir "";
+    //Fin codigo de Empleado
+    Escribir "    Desea continuar";
+    Escribir "    1. Si";
+    Escribir "    2. No";
+    Leer continuar;
+    Si continuar = 1 Entonces
+      //Código de cliente
+      Limpiar Pantalla;
+      Escribir "Bienvenidos a Su Banco Fiel";
+      Escribir "Ingrese su clave";
+      Leer clave;
+      clave <- cuentaclient( clave, nombre, cc, direc, tipoc, numc, cantidad );
+    SiNo
+      Escribir "Debes elegir que si para ver el resto del sistema";
+    FinSi
+    //FIN CÓDIGO CLIENTE
+  FinProceso
+
+
+
+</pre>
+
+
+
+
+      </nav>
+      <section class="caja_links">
+        <nav class="links">
+          <button class="boton2"><a href="../portafolio.html">Volver a Principal</a></button>
+        </nav>
+      </section>
+    </article>
+
+  </section>
+
+  <footer>
+    <table>
+      <tr>
+        <th colspan="3">
+          <h1>Redes sociales</h1>
+          <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4>
+          </td>
+          </td>
+      </tr>
+      <tr>
+        <td>
+          <h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="../imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4>
+        </td>
+        <td>
+          <h4 align="center"><a href="http://facebook.com">
+              <img src="../imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4>
+        </td>
+        <td>
+          <h4 align="center"><a href="http://instagram.com">
+              <img src="../imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4>
+        </td>
+      </tr>
+    </table>
+  </footer>
+</body>
+
+</html>

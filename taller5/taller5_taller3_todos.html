@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <title>Cantera 1 Taller 5</title>
+</head>
+
+<body>
+
+  <section id="contenedor_taller3">
+    <nav id="titulo">Taller 5 PSeint</nav>
+
+
+    <article id="Container">
+
+      <section id="subtitulo">TALLER DE FUNCIONES</section>
+      <nav id="caja3_taller5">
+        <div id="subtitulo">Ejercicio  6 , 7 y 8  de CICLOS</div>
+        <br>
+
+
+        <br>
+        <p>6. Se está creando una aplicación que va a estar conectada con un prototipo que permita
+            almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener
+            nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3
+            contactos verificando que el número no esté almacenado, buscar contactos almacenados y
+            eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando
+            el usuario así lo indique..</p>
+
+    <pre class="taller5"><br>
+
+
+      SubProceso agendacontac <- agenda ( contacto1 )
+	
+      Definir nombre1, nombre2, nombre3 Como Caracter;
+      Definir org1, org2, org3 Como Caracter;
+      Definir tlf1, tlf2, tlf3 Como Entero;
+      Definir salir Como Caracter;
+      Definir opcion Como Caracter;
+      Definir siguente Como Caracter;;
+            
+        Si contacto1 = 1 Entonces
+        Escribir "Agregue su 1er contacto ";
+        Escribir "Indique el Número de Télefono de su 1er contacto";
+        Leer tlf1;
+        Escribir "Indique el Nombre de su 1er contacto";
+        Leer nombre1;
+        Escribir "Indique la organización de su 1er contacto";
+        Leer org1;
+        Escribir "";
+        Escribir "¿Desea agregar otro contacto?";
+        Escribir "(S).para ingresar otro contacto";
+        Escribir "(N) para salir";
+        Leer siguente;
+        Si siguente = "s" o siguente = "S" Entonces
+           Limpiar Pantalla;
+           Escribir "Indique el Número de Télefono de su 2do contacto";
+            Leer tlf2;
+            si tlf2 = tlf1 Entonces
+            Escribir "El Número ingresado ya existe, No se puede continuar";
+            SiNo
+            Escribir "Indique el Nombre de su 2do contacto";
+            Leer nombre2;
+            Escribir "Indique la organización de su 2do contacto";
+            Leer org2;
+            Escribir "";
+            Escribir "¿Desea agregar otro contacto?";
+            Escribir "(S).para ingresar otro contacto";
+            Escribir "(N) para salir";
+            Leer siguente;
+            Si siguente = "s" o siguente = "S" Entonces
+            Limpiar Pantalla;
+            Escribir "Indique el Número de Télefono de su 3er contacto";
+            Leer tlf3;
+            si tlf3 = tlf1 o tlf3 = tlf2 Entonces
+            Escribir "El Número ingresado ya existe, No se puede continuar";
+            SiNo
+            Escribir "Indique el Nombre de su 3er contacto";
+            Leer nombre3;
+            Escribir "Indique la organización de su 3er contacto";
+            Leer org3;
+            Escribir "";
+            Escribir "Sus Contactos Guardados son";
+            Escribir "1. Teléfono: ", tlf1, ", Nombre: ", nombre1, ", Organización " , org1;
+            Escribir "2. Teléfono: ", tlf2, ", Nombre: ", nombre2, ", Organización " , org2;
+            Escribir "3. Teléfono: ", tlf3, ", Nombre: ", nombre3, ", Organización " , org3;
+            Escribir "";
+            Escribir" ATENCIÓN: ¡¡¡Memoria Llena!!!... Ya no puede agregar más contactos 
+            a la Agenda.";
+            FinSi
+            FinSi
+            FinSi	
+            FinSi
+            FinSi
+                
+        FinSubProceso
+        Proceso AppTelefonica
+        Definir contacto1, contacto2, contacto3 Como Entero;
+        Definir salir Como Caracter;
+    
+        
+        
+        Repetir
+            Limpiar Pantalla;
+            Escribir "Sistema de Almacenamiento de contactos";
+            Escribir "Ingrese sus contactos"; 
+            contacto1 <- 1;
+            contacto1 <- agenda(contacto1);
+            
+            Escribir "";
+            Escribir "¿Desea Salir de la Agenda?";
+            Escribir "(S).para Salir";
+            Escribir "(N).para Continuar";
+            Leer salir;
+        Hasta Que salir = "S" o salir = "s";
+            
+        FinProceso
+        
+        </pre>
+
+
+        <br>
+        <p>7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los
+            usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se
+            cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del
+            vehículo como son, placa y marca, y los datos del cliente como son nombre completo y
+            número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al
+            parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el
+            parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+            Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p>
+
+<pre class="taller5">
+    SubProceso full()
+    Definir opcion Como Caracter;
+    Escribir "No puede Ingresar más Vehículos, parqueadero lleno";
+    Escribir "(N) Para Continuar";
+    leer opcion;
+    FinSubProceso   
+
+    SubProceso incializar()
+    Definir nombre1, tlf1, placa1,  marca1, fechayhorain1,  fechayhorasal1 Como Caracter;
+    Definir nombre2, tlf2, placa2,  marca2, fechayhorain2,  fechayhorasal2 Como Caracter;
+    Definir nombre3, tlf3, placa3,  marca3, fechayhorain3,  fechayhorasal3 Como Caracter;
+    Definir nombre4, tlf4, placa4,  marca4, fechayhorain4,  fechayhorasal4 Como Caracter;
+    Definir nombre5, tlf5, placa5,  marca5, fechayhorain5,  fechayhorasal5 Como Caracter;
+    Definir salir, ingresar,  opcion  Como Caracter;
+    Definir ingreso Como Entero;
+    Definir opcion2 Como Entero;
+    Definir Activo Como Logico;
+    Definir retirar Como Caracter;
+    ingreso <- 0;
+    //inicializacion de variables
+    nombre1 <- "Vacio"; nombre2 <- "Vacio";  nombre3 <- "Vacio";  nombre4 <- "Vacio";  
+    nombre5 <- "Vacio"; 
+    placa1 <- "Vacio";  placa2 <- "Vacio";  placa3 <- "Vacio";  placa4 <- "Vacio"; 
+     placa5 <- "Vacio"; 
+    tlf1 <- "Vacio";  tlf2 <- "Vacio";  tlf3 <- "Vacio";  tlf4 <- "Vacio";  tlf5 <- "Vacio"; 
+    marca1 <- "Vacio";  marca2 <- "Vacio";  marca3 <- "Vacio";  marca4 <- "Vacio"; 
+     marca5 <- "Vacio";  
+    fechayhorain1 <- "Vacio"; ; fechayhorain2 <- "Vacio";  fechayhorain3 <- "Vacio";  
+    fechayhorain4 <- "Vacio";  fechayhorain5 <- "Vacio"; 
+    fechayhorasal1 <- "Vacio";  fechayhorasal2 <- "Vacio"; fechayhorasal3 <- "Vacio";  
+    fechayhorasal4 <- "Vacio";  fechayhorasal5 <- "Vacio"; 
+    //fin de inciación de variables
+    Repetir
+    Limpiar Pantalla;
+    Escribir "¿QUE ELIJE HACER?";
+    Escribir "(S).Para ingresar un vehiculo";
+    Escribir "(C) Consultar Parqueadero";
+    Escribir "(R) Retirar Vehículo";
+    Escribir "(N) Para Continuar";
+    Escribir "(Q) Para Salir del Sistema";
+    Leer opcion;
+
+        //codigo de ingreso de Vehículos
+    Si opcion = "S" o opcion = "s"  Entonces
+    Limpiar Pantalla;
+    Escribir "Hasta ahora han ingresado: ",  ingreso , " Vehículos"; 
+    Escribir "Indique en que puesto del parqueadero dese usar";
+    Escribir "1. Parqueadero A-1"; sin saltar	
+    Si placa1 = "Vacio" Entonces Escribir " (Disponible) "; 
+    SiNo
+    Escribir " (Ocupado) "; FinSi
+    Escribir "2. Parqueadero A-2"; sin saltar	
+    Si placa2 = "Vacio" Entonces Escribir " (Disponible) "; 
+    SiNo Escribir " 
+    (Ocupado) "; FinSi
+    Escribir "3. Parqueadero A-3"; sin saltar	
+    Si placa3 = "Vacio" Entonces Escribir " (Disponible) "; 
+    SiNo Escribir " (Ocupado) "; FinSi
+    Escribir "4. Parqueadero A-4"; sin saltar	
+    Si placa4 = "Vacio" Entonces Escribir " (Disponible) "; 
+    SiNo Escribir " (Ocupado) "; FinSi
+    Escribir "5. Parqueadero A-5"; sin saltar	
+    Si placa5 = "Vacio" Entonces Escribir " (Disponible) "; 
+    SiNo Escribir " (Ocupado) "; FinSi
+    si ingreso = 5 Entonces
+    Escribir "El Parqueadero esta lleno No puede ingresar más Vehiculos";
+    FinSi
+
+    Leer opcion2;	
+            Si ingreso  <> 5  Entonces
+            Segun opcion2 Hacer
+                1:
+                ingreso <- ingreso + 1;
+                Escribir "Ingrese la Placa del Vehículos ";
+                leer placa1;
+                Escribir "Ingrese la Marca del Vehículo ";
+                Leer marca1;
+                Escribir "Ingrese nombre del conductor ";
+                Leer nombre1;
+                Escribir "Ingrese el Teléfono del Conductor ";
+                Leer tlf1;
+                Escribir "Ingrese  fecha y Hora de Entrada";
+                Leer fechayhorain1;								
+                2:
+                ingreso <- ingreso + 1;
+                Escribir "Ingrese la Placa del Vehículos ";
+                leer placa2;
+                Escribir "Ingrese la Marca del Vehículo ";
+                Leer marca2;
+                Escribir "Ingrese nombre del conductor ";
+                Leer nombre2;
+                Escribir "Ingrese el Teléfono del Conductor ";
+                Leer tlf2;
+                Escribir "Ingrese  fecha y Hora de Entrada";
+                Leer fechayhorain2;
+                                                    
+                3:
+                ingreso <- ingreso + 1;
+                Escribir "Ingrese la Placa del Vehículos ";
+                leer placa3;
+                Escribir "Ingrese la Marca del Vehículo ";
+                Leer marca3;
+                Escribir "Ingrese nombre del conductor ";
+                Leer nombre3;
+                Escribir "Ingrese el Teléfono del Conductor ";
+                Leer tlf3;
+                Escribir "Ingrese  fecha y Hora de Entrada";
+                Leer fechayhorain3;
+                
+                4:
+                ingreso <- ingreso + 1;
+                Escribir "Ingrese la Placa del Vehículos ";
+                leer placa4;
+                Escribir "Ingrese la Marca del Vehículo ";
+                Leer marca4;
+                Escribir "Ingrese nombre del conductor ";
+                Leer nombre4;
+                Escribir "Ingrese el Teléfono del Conductor ";
+                Leer tlf4;
+                Escribir "Ingrese  fecha y Hora de Entrada";
+                Leer fechayhorain4;
+                                                    
+                5:	
+                ingreso <- ingreso + 1;
+                Escribir "Ingrese la Placa del Vehículos ";
+                leer placa5;
+                Escribir "Ingrese la Marca del Vehículo ";
+                Leer marca5;
+                Escribir "Ingrese nombre del conductor ";
+                Leer nombre5;
+                Escribir "Ingrese el Teléfono del Conductor ";
+                Leer tlf5;
+                Escribir "Ingrese  fecha y Hora de Entrada";
+                Leer fechayhorain5;
+                                                    
+                FinSegun
+            SiNo
+                full();
+            FinSi
+            
+            FinSi
+                                        
+            
+        
+        //fin de ingreso de vehículos
+        //codigo de consulta de Vehículos
+            Si opcion = "c" o opcion = "C" Entonces
+            Limpiar Pantalla;
+            
+            Escribir "                                 CONSULTA DE VEHÍCULOS ";
+            Escribir "                           Vehículos ingresados en Parqueadero ";
+            Escribir " ______________________________________________________________";
+            
+            Escribir " ";
+            Si placa1 = "Vacio" Entonces
+                Escribir "Parqueadero A-1 ( Disponible )";
+            SiNo
+                Escribir "Parqueadero A-1";
+                Escribir "   Placa: ", placa1, " --- Marca: " , marca1 ;
+                Escribir "   Nombre de conductor: ", nombre1; 
+                Escribir "   Teléfono de conductor: ", tlf1,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain1;
+                si fechayhorasal1 <> "Vacio" Entonces
+                    Escribir "   Fecha y hora de Retiro ", fechayhorasal1;
+                FinSi
+                
+            FinSi	
+            Escribir " ______________________________________________________________";
+            Escribir " ";
+            Si placa2 = "Vacio" Entonces
+                Escribir "Parqueadero A-2 ( Disponible )";
+            SiNo
+                Escribir "Parqueadero A-2";
+                Escribir "   Placa: ", placa2, " --- Marca: " , marca2 ;
+                Escribir "   Nombre de conductor: ", nombre2; 
+                Escribir "   Teléfono de conductor: ", tlf2,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain2;
+                si fechayhorasal2 <> "Vacio" Entonces
+                    Escribir "   Fecha y hora de Retiro ", fechayhorasal2;
+                FinSi	
+                
+            FinSi	
+            Escribir " ______________________________________________________________";
+            Escribir " ";
+            Si placa3 = "Vacio" Entonces
+                Escribir "Parqueadero A-3 ( Disponible )";
+            SiNo
+                Escribir "Parqueadero A-3 ";
+                Escribir "   Placa: ", placa3, " --- Marca: " , marca3 ;
+                Escribir "   Nombre de conductor: ", nombre3; 
+                Escribir "   Teléfono de conductor: ", tlf3,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain3;
+                si fechayhorasal3 <> "Vacio" Entonces
+                    Escribir "   Fecha y hora de Retiro ", fechayhorasal3;
+                FinSi
+                
+            FinSi
+            Escribir " ______________________________________________________________";
+            Escribir " ";
+            Si placa4 = "Vacio" Entonces
+                Escribir "Parqueadero A-4 ( Disponible )";
+            SiNo
+                Escribir "Parqueadero A-4 ";
+                Escribir "   Placa: ", placa4, " --- Marca: " , marca4 ;
+                Escribir "   Nombre de conductor: ", nombre4; 
+                Escribir "   Teléfono de conductor: ", tlf4,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain4;
+                si fechayhorasal4 <> "Vacio" Entonces
+                    Escribir "   Fecha y hora de Retiro ", fechayhorasal4;
+                FinSi
+                
+                
+            FinSi
+            Escribir " ______________________________________________________________";
+            Escribir " ";
+            Si placa5 = "Vacio" Entonces
+                Escribir "Parqueadero A-5 ( Disponible )";
+            SiNo
+                Escribir "Parqueadero A-5 ";
+                Escribir "5. Placa: ", placa5, " --- Marca: " , marca5 ;
+                Escribir "   Nombre de conductor: ", nombre5; 
+                Escribir "   Teléfono de conductor: ", tlf5,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain5;
+                si fechayhorasal5 <> "Vacio" Entonces
+                    Escribir "   Fecha y hora de Retiro ", fechayhorasal5;
+                FinSi
+                
+            FinSi
+            Escribir " ______________________________________________________________";
+            Escribir " ";
+            Escribir "(N) Para Continuar";
+            leer opcion;
+            FinSi
+                //fin de consulta de Vehículos		
+            //codigo de retiro de vehiculos
+            Si opcion = "r" o opcion = "R" Entonces
+                Escribir "Retirada de Vehiculos";
+                Escribir  "Por favor imgrese la placa del Vehiculo a retirar";
+                Leer retirar;
+                Si retirar = placa1 Entonces
+                    Escribir "Ingresa la Hora de retiro";
+                    leer fechayhorasal1;
+                SiNo
+                    Si retirar = placa2 Entonces
+                        Escribir "Ingresa la Hora de retiro";
+                        leer fechayhorasal2;
+                    SiNo
+                        Si retirar = placa3 Entonces
+                            Escribir "Ingresa la Hora de retiro";
+                            leer fechayhorasal3;
+                        SiNo
+                            Si retirar = placa4 Entonces
+                                Escribir "Ingresa la Hora de retiro";
+                                leer fechayhorasal4;
+                            SiNo
+                                Si retirar = placa5 Entonces
+                                    Escribir "Ingresa la Hora de retiro";
+                                    leer fechayhorasal5;
+                                SiNo
+                                    Escribir "La Placa que intrudujo no es correcto";
+                                    Escribir "(N) Para Continuar";
+                                    leer opcion;
+                                FinSi
+                            FinSi	
+                        FinSi	
+                    FinSi
+                FinSi
+            FinSi
+            
+            //fin de retiro de vehículo
+            
+            Limpiar Pantalla;					
+            Si ingreso = 5 Entonces
+                Escribir "El Parqueadero esta lleno no puede ingresar más Vehículos";
+                Escribir "Los Vehículos ingresados son: ";
+                Escribir "1. Placa: ", placa1, " Marca: " , marca1 ;
+                Escribir "   Nombre de conductor: ", nombre1; 
+                Escribir "   Teléfono de conductor: ", tlf1,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain1;
+                Escribir " ";
+                
+                Escribir "2. Placa: ", placa2, " Marca: " , marca2 ;
+                Escribir "   Nombre de conductor: ", nombre2; 
+                Escribir "   Teléfono de conductor: ", tlf2,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain2;
+                Escribir " ";
+                
+                Escribir "3. Placa: ", placa3, " Marca: " , marca3 ;
+                Escribir "   Nombre de conductor: ", nombre3; 
+                Escribir "   Teléfono de conductor: ", tlf3,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain3;
+                Escribir " ";
+                Escribir "4. Placa: ", placa4, " Marca: " , marca4 ;
+                Escribir "   Nombre de conductor: ", nombre4; 
+                Escribir "   Teléfono de conductor: ", tlf4,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain4;
+                Escribir " ";
+                Escribir "5. Placa: ", placa5, " Marca: " , marca5 ;
+                Escribir "   Nombre de conductor: ", nombre5; 
+                Escribir "   Teléfono de conductor: ", tlf5,;
+                Escribir "   Fecha y hora de entrada: ", fechayhorain5;
+                Escribir " ";
+                Escribir "El Parqueadero esta lleno no puede ingresar más Vehículos";
+                Escribir "(N) Para Continuar";
+                leer opcion;
+            FinSi
+            //fin de parquedero lleno					
+            
+        Hasta Que opcion = "Q" o opcion = "q";						
+                                      
+        FinSubProceso
+        
+        Proceso AppParqueadero
+            incializar();
+        FinProceso
+        </pre>
+
+
+        <br>
+        <p>8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus
+            clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado
+            para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se
+            debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el
+            curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el
+            sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene
+            capacidad máxima de gestionar 8 usuarios en su totalidad.</p>
+
+        <pre class="taller5">
+
+            SubProceso ingrestudian <- ingresar ( opcion )
+            //código para incluir estudiantes
+            Si opcion = "i" o opcion = "I" Entonces
+                Limpiar Pantalla;
+                Escribir "Ingreso de Estudiantes para el curso de conducción";
+                Si alumno1 = "Vacio" Entonces
+                    Escribir "Ingrese el Nombre del Estudiante";
+                    Leer alumno1;
+                    Escribir "Ingrese el Cédula del Estudiante";
+                    Leer cc1;
+                    curso1 <- "Inscrito";
+                SiNo
+                    Si alumno2 = "Vacio" Entonces
+                        Escribir "Ingrese el Nombre del Estudiante";
+                        Leer alumno2;
+                        Escribir "Ingrese el Cédula del Estudiante";
+                        Leer cc2;
+                        curso2 <- "Inscrito";
+                    SiNO
+                        Si alumno3 = "Vacio" Entonces
+                            Escribir "Ingrese el Nombre del Estudiante";
+                            Leer alumno3;
+                            Escribir "Ingrese el Cédula del Estudiante";
+                            Leer cc3;
+                            curso3 <- "Inscrito";
+                        SiNO
+                            Si alumno4 = "Vacio" Entonces
+                                Escribir "Ingrese el Nombre del Estudiante";
+                                Leer alumno4;
+                                Escribir "Ingrese el Cédula del Estudiante";
+                                Leer cc4;
+                                curso4 <- "Inscrito";
+                            SiNO
+                                Si alumno5 = "Vacio" Entonces
+                                    Escribir "Ingrese el Nombre del Estudiante";
+                                    Leer alumno5;
+                                    Escribir "Ingrese el Cédula del Estudiante";
+                                    Leer cc5;
+                                    curso5 <- "Inscrito";
+                                SiNO
+                                    Si alumno6 = "Vacio" Entonces
+                                        Escribir "Ingrese el Nombre del Estudiante";
+                                        Leer alumno6;
+                                        Escribir "Ingrese el Cédula del Estudiante";
+                                        Leer cc6;
+                                        curso6 <- "Inscrito";
+                                    SiNO
+                                        Si alumno7 = "Vacio" Entonces
+                                            Escribir "Ingrese el Nombre del Estudiante";
+                                            Leer alumno7;
+                                            Escribir "Ingrese el Cédula del Estudiante";
+                                            Leer cc7;
+                                            curso7 <- "Inscrito";
+                                        SiNO
+                                            Si alumno8 = "Vacio" Entonces
+                                                Escribir "Ingrese el Nombre del Estudiante";
+                                                Leer alumno8;
+                                                Escribir "Ingrese el Cédula del Estudiante";
+                                                Leer cc8;
+                                                curso8 <- "Inscrito";
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                        FinSi
+                    FinSi
+                FinSi
+            FinSi
+        FinSubProceso
+        
+        
+    SubProceso menusistem <- menu ( ingreso )
+    Definir alumno1, alumno2, alumno3, alumno4, alumno5, alumno6, 
+    alumno7, alumno8 Como Caracter;
+    Definir cc1, cc2, cc3, cc4, cc5, cc6, cc7, cc8 Como Caracter;
+    Definir curso1, curso2, curso3, curso4, curso5, curso6, curso7, 
+    curso8 Como Caracter;
+    Definir opcion, opcion2 , bcc Como Caracter;
+    //inicialización de variables
+    alumno1 <- "Vacio"; alumno2 <- "Vacio";  alumno3 <- "Vacio";  
+    alumno4 <- "Vacio";  alumno5 <- "Vacio"; alumno6 <- "Vacio";
+    alumno7 <- "Vacio"; alumno8<- "Vacio";
+    cc1 <- "Vacio"; cc2 <- "Vacio"; cc3 <- "Vacio"; cc4 <- "Vacio";
+    cc5 <- "Vacio"; cc6 <- "Vacio"; cc7 <- "Vacio"; cc8 <- "Vacio";
+    curso1 <- "Vacio"; curso2 <- "Vacio"; curso3 <- "Vacio";
+    curso4 <- "Vacio"; curso5 <- "Vacio"; curso6 <- "Vacio"; 
+    curso7 <- "Vacio"; curso8 <- "Vacio";
+    //fin de inicialización de variables
+     Repetir
+     //Menu de sistemas
+     Escribir "¿Ingrese una opción?";
+     Escribir "(I).Para ingresar un Estudiante";
+     Escribir "(A) Para Aprobar un Estudiante";
+     Escribir "(C) Consultar Licenciados";
+     Escribir "(S) Salir del Sistema";
+     Leer opcion;
+     opcion <- ingresar (opcion);
+     //Fin de menu de sistema	
+     
+     
+     //Fin de Ingreso de estudiantes
+     
+     //Código de Aprobar 	
+            
+Si  opcion = "A" o opcion = "a" Entonces
+Escribir "                   Aprobar Licencia a Estudiantes";
+Escribir "";
+Escribir "Ingrese la Cédula del Estudiante";
+Leer bcc;
+Si bcc = cc1 Entonces
+    Escribir "Indique si el Estudiante Aprueba o Reprueba";
+    Leer curso1;
+SiNo
+    Si bcc = cc2 Entonces
+        Escribir "Indique si el Estudiante Aprueba o Reprueba";
+        Leer curso2;
+    SiNo
+        Si bcc = cc3 Entonces
+            Escribir "Indique si el Estudiante Aprueba o Reprueba";
+            Leer curso3;
+        SiNo
+            Si bcc = cc4 Entonces
+                Escribir "Indique si el Estudiante Aprueba o Reprueba";
+                Leer curso4;
+            SiNo
+                Si bcc = cc5 Entonces
+                    Escribir "Indique si el Estudiante Aprueba o Reprueba";
+                    Leer curso5;
+                SiNo
+                    Si bcc = cc6 Entonces
+                        Escribir "Indique si el Estudiante Aprueba o Reprueba";
+                        Leer curso6;
+                    SiNo
+                        Si bcc = cc7 Entonces
+                            Escribir "Indique si el Estudiante Aprueba o Reprueba";
+                            Leer curso7;
+                        SiNo
+                            Si bcc = cc8 Entonces
+                                Escribir "Indique si el Estudiante Aprueba o Reprueba";
+                                Leer curso8;
+                            SiNo
+                        Escribir "La Cédula no existe, no se puede generar el cambio";
+                         FinSi
+                     FinSi		
+                 FinSi		
+             FinSi	
+         FinSi
+       FinSi         
+    FinSi
+FinSi
+Escribir "(N) Para Continuar";
+                    leer opcion;	
+                    Limpiar Pantalla;
+                FinSi
+                
+                //fin de aprobación
+                
+                //inicio de Consulta
+                Limpiar Pantalla;
+                Si opcion = "c" o opcion = "C"  Entonces
+                    Escribir "      Consulta de los Aprobados y los no Aprobados ";
+                    Escribir " ";
+                    Si alumno1 = "Vacio" Entonces
+                        Escribir "";
+                    SiNo
+                        Escribir "1. Nombre ", alumno1, " CC ", cc1 ;
+                        Escribir " Curso de Conducción "; 
+                    FinSi
+                    Si curso1 = "Aprobado" Entonces
+                        Escribir "Licencia de Conducir:",  curso1 ; 
+                    SiNo
+                        Escribir "Licencia de Conducir: ", curso1 ; 
+                    FinSi
+                    Escribir "_________________________________________________";
+                    Escribir " ";
+                    
+                    Si alumno2 = "Vacio" Entonces
+                        Escribir "";
+                    SiNo
+                        Escribir "2. Nombre ", alumno2, " CC ", cc2 ;
+                        Escribir "Curso de Conducción "; 
+                        Si curso2 = "Aprobado" Entonces
+                            Escribir "Licencia de Conducir:",  curso2 ; 
+                        SiNo
+                            Escribir "Licencia de Conducir: ", curso2 ; 
+                        FinSi
+                        Escribir "________________________________________________";
+                        Escribir " ";
+                    FinSi
+                    
+                    
+                    Si alumno3 = "Vacio" Entonces
+                        Escribir "";
+                    SiNo
+                        Escribir "3. Nombre ", alumno3, " CC ", cc3 ;
+                        Escribir "Curso de Conducción "; 
+                        Si curso3 = "Aprobado" Entonces
+                            Escribir "Licencia de Conducir:",  curso3 ; 
+                        SiNo
+                            Escribir "Licencia de Conducir: ", curso3 ; 
+                        FinSi
+                        Escribir "___________________________________________________";
+                        Escribir " ";
+                    FinSi
+                    
+                    
+                    Si alumno4 = "Vacio" Entonces
+                        Escribir "";
+                    SiNo
+                        Escribir "4. Nombre ", alumno4, " CC ", cc4 ;
+                        Escribir "Curso de Conducción "; 
+                        Si curso4 = "Aprobado" Entonces
+                            Escribir "Licencia de Conducir:",  curso4 ; 
+                        SiNo
+                            Escribir "Licencia de Conducir: ", curso4 ; 
+                        FinSi
+                        Escribir "____________________________________________________";
+                        Escribir " ";
+                    FinSi
+                    
+                    
+                    Si alumno5 = "Vacio" Entonces
+                        Escribir "";
+                    SiNo
+                        Escribir "5. Nombre ", alumno5, " CC ", cc5 ;
+                        Escribir "Curso de Conducción "; 
+                        Si curso5 = "Aprobado" Entonces
+                            Escribir "Licencia de Conducir:",  curso5 ; 
+                        SiNo
+                            Escribir "Licencia de Conducir: ", curso5 ; 
+                        FinSi
+                        Escribir "______________________________________________________";
+                        Escribir " ";
+                    FinSi
+                    
+                    
+                    Si alumno6 = "Vacio" Entonces
+                        Escribir "";
+                    SiNo
+                        Escribir "6. Nombre ", alumno6, " CC ", cc6 ;
+                        Escribir "Curso de Conducción "; 
+                        Si curso6 = "Aprobado" Entonces
+                            Escribir "Licencia de Conducir:",  curso6 ; 
+                        SiNo
+                            Escribir "Licencia de Conducir: ", curso6 ; 
+                        FinSi
+                        Escribir "______________________________________________________";
+                        Escribir " ";
+                    FinSi
+                    
+                    
+                    Si alumno7 = "Vacio" Entonces
+                        Escribir "";
+                    SiNo
+                        Escribir "7. Nombre ", alumno7, " CC ", cc7 ;
+                        Escribir "Curso de Conducción "; 
+                        Si curso7 = "Aprobado" Entonces
+                            Escribir "Licencia de Conducir:",  curso7 ; 
+                        SiNo
+                            Escribir "Licencia de Conducir: ", curso7 ; 
+                        FinSi
+                        Escribir "______________________________________________________";
+                        Escribir " ";
+                    FinSi
+                    
+                    
+                    Si alumno8 = "Vacio" Entonces
+                        Escribir "";
+                    SiNo
+                        Escribir "8. Nombre ", alumno8, " CC ", cc8 ;
+                        Escribir "Curso de Conducción "; 
+                        Si curso8 = "Aprobado" Entonces
+                            Escribir "Licencia de Conducir:",  curso8 ; 
+                        SiNo
+                            Escribir "Licencia de Conducir: ", curso8 ; 
+                        FinSi
+                        Escribir "______________________________________________________";
+                        Escribir " ";
+                    FinSi
+                    
+                    Escribir "(N) Para Continuar";
+                    leer opcion;	
+                    Limpiar Pantalla;
+                    
+                FinSi	
+                
+                //Fin de consulta
+            Hasta Que opcion = "S" o opcion = "s";	  
+        FinSubProceso
+        
+        
+        Proceso AppEscuela
+            
+            Definir ingreso, aprobar Como Entero;
+            
+            ingreso <- 0;
+            ingreso <- menu(ingreso);
+            
+            
+        FinProceso 
+
+      </nav>
+      <section class="caja_links">
+        <nav class="links">
+          <button class="boton2"><a href="../portafolio.html">Volver a Principal</a></button>
+        </nav>
+      </section>
+    </article>
+
+  </section>
+
+  <footer>
+    <table>
+      <tr>
+        <th colspan="3">
+          <h1>Redes sociales</h1>
+          <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4>
+          </td>
+          </td>
+      </tr>
+      <tr>
+        <td>
+          <h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="../imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4>
+        </td>
+        <td>
+          <h4 align="center"><a href="http://facebook.com">
+              <img src="../imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4>
+        </td>
+        <td>
+          <h4 align="center"><a href="http://instagram.com">
+              <img src="../imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4>
+        </td>
+      </tr>
+    </table>
+  </footer>
+</body>
+
+</html>

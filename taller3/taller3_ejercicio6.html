@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <title>Taller 3 Ejercicio 6</title>
+</head>
+
+<body>
+
+  <section id="contenedor2_largo">
+    <nav id="titulo">Taller 3 PSeint</nav>
+
+
+    <article id="Container">
+
+      <section id="subtitulo">CICLOS</section>
+      <nav id="caja3_larga">
+        <div id="subtitulo">Ejercicio # 6</div>
+        <br>
+        <p>Se está creando una aplicación que va a estar conectada con un prototipo que permita
+          almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener
+          nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3
+          contactos verificando que el número no esté almacenado, buscar contactos almacenados y
+          eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando
+          el usuario así lo indique.</p>
+        <nav id="caja4_larga">
+          <p>Código Pseint</p>
+          <ul>
+            Proceso AppTelefonica
+            <li>Definir contacto1, contacto2, contacto3 Como Entero;</li>
+            <li>Definir nombre1, nombre2, nombre3 Como Caracter;</li>
+            <li>Definir org1, org2, org3 Como Caracter;</li>
+            <li>Definir tlf1, tlf2, tlf3 Como Entero;</li>
+            <li>Definir salir Como Caracter;</li>
+            <li>Definir opcion Como Caracter;</li>
+            <li>Definir siguente Como Caracter;</li>
+            <li>Repetir</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Sistema de Almacenamiento de contactos";</li>
+            <li> Escribir "Ingrese sus contactos";</li>
+            <li> contacto1 <- 1;</li>
+            <li> Si contacto1 = 1 Entonces</li>
+            <li> Escribir "Agregue su 1er contacto ";</li>
+            <li>Escribir "Indique el Número de Télefono de su 1er contacto";</li>
+            <li>Leer tlf1;</li>
+            <li>Escribir "Indique el Nombre de su 1er contacto";</li>
+            <li>Leer nombre1;</li>
+            <li>Escribir "Indique la organización de su 1er contacto";</li>
+            <li>Leer org1;</li>
+            <li>Escribir "";</li>
+            <li>Escribir "¿Desea agregar otro contacto?";</li>
+            <li>Escribir "(S).para ingresar otro contacto";</li>
+            <li>Escribir "(N) para salir";</li>
+            <li>Leer siguente;</li>
+            <li>Si siguente = "s" o siguente = "S" Entonces</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Indique el Número de Télefono de su 2do contacto";</li>
+            <li>Leer tlf2;</li>
+            <li>si tlf2 = tlf1 Entonces</li>
+            <li> Escribir "El Número ingresado ya existe, No se puede continuar";</li>
+            <li>SiNo</li>
+            <li>Escribir "Indique el Nombre de su 2do contacto";</li>
+            <li>Leer nombre2;</li>
+            <li>Escribir "Indique la organización de su 2do contacto";</li>
+            <li>Leer org2;</li>
+            <li>Escribir "";</li>
+            <li>Escribir "¿Desea agregar otro contacto?";</li>
+            <li>Escribir "(S).para ingresar otro contacto";</li>
+            <li>Escribir "(N) para salir";</li>
+            <li>Leer siguente;</li>
+            <li>Si siguente = "s" o siguente = "S" Entonces</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Indique el Número de Télefono de su 3do contacto";</li>
+            <li>Leer tlf3;</li>
+            <li>si tlf3 = tlf1 o tlf3 = tlf2 Entonces</li>
+            <li>Escribir "El Número ingresado ya existe, No se puede continuar";</li>
+            <li> SiNo</li>
+            <li>Escribir "Indique el Nombre de su 3er contacto";</li>
+            <li>Leer nombre3;</li>
+            <li>Escribir "Indique la organización de su 3er contacto";</li>
+            <li>Leer org3;</li>
+            <li>Escribir "";</li>
+            <li>Escribir "Sus Contactos Guardados son";</li>
+            <li>Escribir "1. Teléfono: ", tlf1, ", Nombre: ", nombre1, ", Organización " , org1;</li>
+            <li>Escribir "2. Teléfono: ", tlf2, ", Nombre: ", nombre2, ", Organización " , org2;</li>
+            <li>Escribir "3. Teléfono: ", tlf3, ", Nombre: ", nombre3, ", Organización " , org3;</li>
+            <li>FinSi</li>
+            <li>FinSi</li>
+            <li>FinSi</li>
+            <li>FinSi</li>
+            <li>FinSi</li>
+            <li>Escribir "";</li>
+            <li>Escribir "¿Desea Salir de la Agenda?";</li>
+            <li>Escribir "(S).para Salir";</li>
+            <li>Escribir "(N).para Continuar";</li>
+            <li>Leer salir;</li>
+            <li> Hasta Que salir = "S" o salir = "s";</li>
+            FinProceso
+
+          </ul>
+        </nav>
+
+      </nav>
+
+      </nav>
+      <section class="caja_links">
+        <nav class="links">
+          <button class="boton2"><a href="../portafolio.html">Volver a Principal</a></button>
+
+        </nav>
+      </section>
+    </article>
+
+  </section>
+
+  <footer>
+    <table>
+      <tr>
+        <th colspan="3">
+          <h1>Redes sociales</h1>
+          <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4>
+          </td>
+          </td>
+      </tr>
+      <tr>
+        <td>
+          <h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="../imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4>
+        </td>
+        <td>
+          <h4 align="center"><a href="http://facebook.com">
+              <img src="../imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4>
+        </td>
+        <td>
+          <h4 align="center"><a href="http://instagram.com">
+              <img src="../imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4>
+        </td>
+      </tr>
+    </table>
+  </footer>
+</body>
+
+</html>

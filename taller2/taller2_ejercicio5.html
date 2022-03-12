@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+	<title>Cantera 1 Taller 2 Ejercicio 5</title>
+</head>
+<body>
+
+	<section id="contenedor_ultra">
+<nav id="titulo">Taller 2 PSeint</nav>
+
+
+<article id="Container">
+
+<section id="subtitulo">CICLOS</section>
+<nav id="caja3_ultra">
+	<div id="subtitulo">Ejercicio # 5</div>
+     <br>
+      <p>5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación
+      para poder facturar los productos que vende a sus clientes y para ello, los productos tienen
+      unas características que deben indicársele al cliente para que pueda escoger el producto a
+      comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de
+      precios por producto y devoluciones en caso de que se presenten.</p>
+     <nav id="caja4_ultra">
+       <p>Código Pseint</p>
+          <ul>
+            Proceso AppDrogueria
+            <li>Definir nombre Como Caracter;</li>
+            <li>Definir  opcion Como Entero;</li>
+            <li>Definir  opcion2 Como Entero;</li>
+            <li>Definir  opcion3 Como Entero;</li>
+            <li>Definir  opcion4 Como Entero;</li>
+            <li>Definir  opcion5 Como Entero;</li>
+            <li>Definir  comentario Como Caracter;</li>
+            <li>Definir medicamento Como Caracter;</li>
+            <li>Definir precio Como Real;</li>
+            <li>Definir devolucion Como Caracter;</li>
+            <li>//binevenida de Drogueria</li>
+            <li>Escribir "Bienvenidos a Su *Drogueria Mi Salud*";</li>
+            <li>Escribir "Indique su Nombre y Apellido por favor";</li>
+            <li>Leer nombre;</li>
+            <li>//fin de bienvenida</li>
+            <li>//peticion de opciones</li>
+            <li>Escribir "Elija una Opción";</li>
+            <li>Escribir "1. Comprar Medicamentos ";</li>
+            <li>Escribir "2. Consultar Medicamentos disponibles  ";</li>
+            <li>Escribir "3. Devolver Medicamentos";</li>	
+            <li>Leer opcion;</li>
+            <li>//fin de peticion de opciones</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Bienvenido a la Venta de Medicamentos por favor elija su opción";</li>
+            <li>Segun opcion Hacer</li>
+            <li>1://codigo de compra de medicamento</li>
+            <li>Escribir "Lista de Pastillas";</li>
+            <li>Escribir "1. Pastillas para el dolor de Cabeza";</li>	
+            <li>scribir "2. Pastillas para el dolor Muscular ";</li>
+            <li>Escribir "3. Pastillas para el dolor de Estomago";</li>
+            <li>Leer opcion2;</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Segun opcion2 Hacer</li>
+            <li>1://compra dolor de cabeza</li>
+            <li>Escribir "1. Dolor de Cabeza";</li>	
+            <li>Segun opcion2 Hacer</li>
+            <li>1://opciones de pastillas para el dolor de cabeza y compra</li>
+            <li>Escribir " Estas son las pastillas para el Dolor de Cabeza ";</li>
+            <li>Escribir "1  Dol Forte";</li>
+            <li>Escribir "2. Tylenol";</li>
+            <li>Escribir "3. Ibuprofeno";</li>
+            <li>Escribir "4. Aspirina";</li>
+            <li>Leer opcion3;</li>
+            <li>Segun opcion3 Hacer</li>
+            <li>1:</li>
+            <li>medicamento<- "Dol Forte";</li>
+            <li>precio<-6000;</li>
+            <li>2:</li>
+            <li>medicamento<- "Tylenol";</li>
+            <li>precio<-5000;</li>
+            <li>3:</li>
+            <li>medicamento<- "Ibuprofeno";</li>
+            <li>precio<-4000;</li>	
+            <li>4:</li>
+            <li>medicamento<- "Aspirina";</li>
+            <li>precio<-3000;</li>
+            <li>FinSegun</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Sr(a) ", nombre,  " El medicamento comprado es: " ,medicamento,;</li>
+            <li>Escribir  " Su precio es de ", precio ," mil Pesos Pase a caja para cancelar";</li>
+            <li>FinSegun</li>
+            <li>//fin pastilals para el dolor de cabeza y compra</li>
+            <li>2://codigo dolor muscular y compra</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "2. Dolor Muscular";</li>	
+            <li>Escribir " Estas son las pastillas para el Dolor Muscular";</li>
+            <li>Escribir "1  Naproxeno";</li>
+            <li>Escribir "2. Algidol";</li>
+            <li>Escribir "3. Flanax";</li>
+            <li>Leer opcion3;</li>
+            <li>Segun opcion3 Hacer</li>
+            <li>1:</li>
+            <li>medicamento<- "Naproxeno";</li>
+            <li>precio<-3000;</li>
+            <li>2:</li>
+            <li>medicamento<- "Algidol";</li>
+            <li>precio<-4000;</li>
+            <li>3:</li>
+            <li>medicamento<- "Flanax";</li>
+            <li>precio<-5000;</li>
+            <li>FinSegun</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Sr(a) ", nombre,  " El medicamento comprado es: " ,medicamento,;</li>
+            <li>Escribir  " Su precio es de ", precio ," mil Pesos Pase a caja para cancelar";</li>
+            <li>//fin codigo dolor muscular y compra</li>
+            <li>3://codigo dolor de estomago y compra</li>
+            <li> Escribir "3. Dolor de Estomago";</li>
+            <li>Escribir " Estas son las pastillas para el Dolor de Estomago";</li>
+            <li> Escribir "1  Butilhioscina";</li>
+            <li>Escribir "2. Dolbutin";</li>
+            <li>Escribir "3. Panclasa";</li>
+            <li>Leer opcion3;</li>
+            <li>Segun opcion3 Hacer</li>
+            <li>1:</li>
+            <li>medicamento<- "Butilhioscina";</li>
+            <li>precio<-8000;</li>
+            <li>2:</li>
+            <li>medicamento<- "Dolbutin";</li>
+            <li>precio<-7000;</li>
+            <li>3:</li>
+            <li>medicamento<- "Panclasa";</li>
+            <li>precio<-6000;</li>
+            <li>FinSegun</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Sr(a) ", nombre,  " El medicamento comprado es: " ,medicamento,;</li>
+            <li>Escribir  " Su precio es de ", precio ," mil Pesos Pase a caja para cancelar";</li>  
+            <li>FinSegun</li>
+            <li>//fin dolor de estomago y conmpra</li>
+            <li>2://comienzo de consulta de medicamentos</li>
+            <li>Escribir "Consulta de Medicamentos Disponibles";</li>
+            <li>Escribir "Nuestra lista de películas disponibles son";</li>
+            <li>Escribir "1. Dolores";</li> 
+            <li>Escribir "2. Jarabes"; </li>
+            <li>Leer  opcion2;</li> 
+            <li>Limpiar Pantalla;</li>
+            <li>Segun opcion2 Hacer</li>
+            <li>1://consulta de dolores</li>
+            <li>Escribir "Pastillas para los Dolores de Cabeza";</li>
+            <li>Escribir "1  Dol Forte";</li>
+            <li>Escribir "2. Tylenol";</li>
+            <li>Escribir "3. Ibuprofeno";</li>
+            <li>Escribir "4. Aspirina";</li>
+            <li>Escribir "Pastillas para los Dolores Musculares";</li>
+            <li>Escribir "1  Naproxeno";</li>
+            <li>Escribir "2. Algidol";</li>
+            <li>Escribir "3. Flanax";</li>
+            <li>Escribir " Pastillas para el Dolor de Estomago";</li>
+            <li>Escribir "1  Butilhioscina";</li>
+            <li>Escribir "2. Dolbutin";</li>
+            <li>Escribir "3. Panclasa";</li>
+            <li>2:	//opcion de Jarabes</li>
+            <li>Escribir "Jarabes Para la Tos";</li>
+            <li>Escribir "1  Bromhexina";</li>
+            <li>Escribir "2. Bisolvon";</li>
+            <li>Escribir "3. Bisolmed";</li>
+            <li>Escribir "4. Bronquisol";</li>
+            <li>Escribir "5. Pulmosan";</li>
+            <li>Escribir "Ambroxol";</li>
+            <li>Escribir "Mucosolvan";</li>
+            <li>Escribir "Mucosan";</li>
+            <li>Escribir "Broxol";</li>  
+            <li>FinSegun</li>
+            <li>3://codigo devolver</li>
+            <li>Escribir "Sr(a) ", nombre , " Usted procede a devolver un medicamento";</li>
+            <li>Escribir "Escriba el nombre del Medicamento que desea devolver";</li> 
+            <li>Leer medicamento;</li>
+            <li>Escribir "Por favor indique si el medicamento devuelto tiene algún deterioro,  daño, o vencimiento a continuación" ;</li>
+            <li>Leer devolucion;</li>
+            <li>Limpiar Pantalla;</li>
+            <li>Escribir "Sr(a) ", nombre , " Usted a Devuelto el Medicamento ", medicamento;</li>
+            <li>Escribir "la razón de devolución es: ", "(", devolucion, ")",;</li> 
+            <li> Escribir "Muchas gracias por preferirnos";</li>
+            <li>//fin devolución</li>
+            FinSegun<br>
+          FinProceso
+          
+        </ul>
+     </nav>
+     
+</nav>
+
+</nav>
+<section class="caja_links">
+  <nav class="links">
+    <button class="boton2"><a href="../portafolio.html" >Volver a Principal</a></button> 
+    
+  </nav></section>
+</article>
+
+	</section>
+
+	<footer>
+        <table>
+          <tr><th colspan="3"><h1>Redes sociales</h1>
+            <h4>Copyrigth© 2022 Todos los Derechos Reservados</h4></td></td></tr>
+          <tr>
+            <td><h4 align="center"><a href="https://www.linkedin.com/in/elkin-sierra-hernandezdez-2192101b5/">
+              <img src="../imagenes\linkedin.jpg" width="60px"><br> Linkedin</a></h4></td>
+            <td><h4 align="center"><a href="http://facebook.com">
+              <img src="../imagenes\facebook.jpg" width="60px"><br>Facebook</a></h4></td>
+            <td><h4 align="center"><a href="http://instagram.com">
+              <img src="../imagenes\instagram.jpg" width="60px"><br>Instagram </a></h4></td>
+          </tr>
+            </table>
+      </footer>
+</body>
+</html>
